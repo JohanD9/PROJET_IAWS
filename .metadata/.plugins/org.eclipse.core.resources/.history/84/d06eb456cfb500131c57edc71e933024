@@ -1,0 +1,15 @@
+
+public class Place {
+	String label;
+	String category;
+	String key;
+	String className;
+	String x;
+	String y;
+	String id;
+	String rank;
+	String network;
+	
+	
+	
+}
