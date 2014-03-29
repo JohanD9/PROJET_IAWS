@@ -4,7 +4,7 @@ import org.json.JSONObject;
 
 public class ParserJsonStop
 {
-	String json;
+	 private String json;
 	
 	public ParserJsonStop (String json)
 	{

@@ -84,11 +84,10 @@ public class Place
 	}
 
 	@Override
-	public String toString() {
-		return label + " : " + "\n		category : " + category + "	\n		key : "
-				+ key + "\n		className : " + className + "\n		x : " + x + "\n		y : " + y
-				+ "\n		id : " + id + "\n		rank : " + rank + "\n		network : 	" + network + "\n";
-	}
-	
-	
+	public String toString()
+	{
+		return (""+label+" : "+"\n\t\tcategory : "+category+"\n\t\tkey : "
+				+key+"\n\t\tclassName : "+className+"\n\t\tx : "+x+"\n\t\ty : "+y
+				+"\n\t\tid : "+id+"\n\t\trank : "+rank+"\n\t\tnetwork : "+network+"\n");
+	}	
 }
