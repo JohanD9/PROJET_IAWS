@@ -1,0 +1,6 @@
+package gestionST4;
+
+public class GestionVelo {
+	private String station;
+
+}

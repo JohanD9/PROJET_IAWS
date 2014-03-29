@@ -24,3 +24,6 @@ http://pt.data.tisseo.fr/departureBoard?format=json&stopPointId=1970324837185357
 ================================================================= ST4 =================================================================
 // Récuperer les infos de la station Paul Sab
 https://api.jcdecaux.com/vls/v1/stations/227?contract=Toulouse&apiKey=d3a6958a033987763c45e1311847f98909303f34
+
+// Récuperer les infos de la station Faculte de pharmacie
+https://api.jcdecaux.com/vls/v1/stations/228?contract=Toulouse&apiKey=d3a6958a033987763c45e1311847f98909303f34
