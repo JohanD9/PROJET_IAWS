@@ -1,0 +1,31 @@
+import java.io.IOException;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+
+public class Main
+{
+	public static void main(String[] args) throws IOException, JSONException
+	{
+		LaunchRequest requestPaulSab = new LaunchRequest(
+				"http://pt.data.tisseo.fr/placesList?format=json&term=paul%20sabatier&displayOnlyStopAreas=1"
+				+ "&number=1&key=a03561f2fd10641d96fb8188d209414d8");
+		String res = requestPaulSab.get();
+		
+		ParserJsonStop pj = new ParserJsonStop(res);
+		Place placePaulSab = pj.parse();
+		System.out.println(placePaulSab.toString());
+		
+		//JSONObject jsonObj = new JSONObject(p);
+		
+		/*String requeteBusPaulSab = new String("http://pt.data.tisseo.fr/departureBoard?format=json&stopPointId="+placePaulSab.getId()+"&key=a03561f2fd10641d96fb8188d209414d8");
+		LaunchRequest requestListAreasPaulSab = new LaunchRequest(requeteBusPaulSab);
+		String resultAreasPaulSab = requestListAreasPaulSab.get();
+		
+		System.out.println(requeteBusPaulSab);
+		System.out.println(resultAreasPaulSab);
+		*/
+		
+	}
+}

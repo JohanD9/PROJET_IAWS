@@ -1,0 +1,94 @@
+
+public class Place
+{
+	private String label;
+	private String category;
+	private String key;
+	private String className;
+	private String x;
+	private String y;
+	private String id;
+	private String rank;
+	private String network;
+	
+	public String getLabel() {
+		return label;
+	}
+	
+	public void setLabel(String label) {
+		this.label = label;
+	}
+	
+	public String getCategory() {
+		return category;
+	}
+	
+	public void setCategory(String category) {
+		this.category = category;
+	}
+	
+	public String getKey() {
+		return key;
+	}
+	
+	public void setKey(String key) {
+		this.key = key;
+	}
+	
+	public String getClassName() {
+		return className;
+	}
+	
+	public void setClassName(String className) {
+		this.className = className;
+	}
+	
+	public String getX() {
+		return x;
+	}
+	
+	public void setX(String x) {
+		this.x = x;
+	}
+	
+	public String getY() {
+		return y;
+	}
+	
+	public void setY(String y) {
+		this.y = y;
+	}
+	
+	public String getId() {
+		return id;
+	}
+	
+	public void setId(String id) {
+		this.id = id;
+	}
+	
+	public String getRank() {
+		return rank;
+	}
+	
+	public void setRank(String rank) {
+		this.rank = rank;
+	}
+	
+	public String getNetwork() {
+		return network;
+	}
+	
+	public void setNetwork(String network) {
+		this.network = network;
+	}
+
+	@Override
+	public String toString() {
+		return label + " : " + "\n		category : " + category + "	\n		key : "
+				+ key + "\n		className : " + className + "\n		x : " + x + "\n		y : " + y
+				+ "\n		id : " + id + "\n		rank : " + rank + "\n		network : " + network;
+	}
+	
+	
+}

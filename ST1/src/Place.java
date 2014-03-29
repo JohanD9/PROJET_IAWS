@@ -1,15 +1,15 @@
 
 public class Place
 {
-	String label;
-	String category;
-	String key;
-	String className;
-	String x;
-	String y;
-	String id;
-	String rank;
-	String network;
+	private String label;
+	private String category;
+	private String key;
+	private String className;
+	private String x;
+	private String y;
+	private String id;
+	private String rank;
+	private String network;
 	
 	public String getLabel() {
 		return label;
@@ -82,4 +82,13 @@ public class Place
 	public void setNetwork(String network) {
 		this.network = network;
 	}
+
+	@Override
+	public String toString() {
+		return label + " : " + "\n		category : " + category + "	\n		key : "
+				+ key + "\n		className : " + className + "\n		x : " + x + "\n		y : " + y
+				+ "\n		id : " + id + "\n		rank : " + rank + "\n		network : 	" + network + "\n";
+	}
+	
+	
 }

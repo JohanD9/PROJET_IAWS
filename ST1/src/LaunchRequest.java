@@ -8,13 +8,17 @@ import java.nio.charset.Charset;
 
 public class LaunchRequest
 {
-	String url;
+	 private String url;
 	
 	public LaunchRequest(String url)
 	{
 		this.url = url;
 	}
 	
+	/*
+	 * Fonction pour faire un requete HTTP (GET)
+	 * Return un string contenant le Json a traiter
+	 */
 	public String get() throws IOException
 	{
 		String source ="";

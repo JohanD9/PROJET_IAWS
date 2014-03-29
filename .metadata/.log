@@ -548,3 +548,752 @@ Binding(CTRL+D,
 
 !ENTRY org.eclipse.ui 4 4 2014-03-27 17:43:32.387
 !MESSAGE Conflicting handlers for org.eclipse.jdt.ui.edit.text.java.refactor.quickMenu: {org.eclipse.jdt.internal.ui.actions.JDTQuickMenuCreator$1@6b84cf28} vs {org.eclipse.jdt.internal.ui.actions.JDTQuickMenuCreator$1@5c3c823d}
+!SESSION 2014-03-28 16:32:30.412 -----------------------------------------------
+eclipse.buildId=4.3.0.11fc20
+java.version=1.7.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=fr_FR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:32:31.420
+!MESSAGE NLS unused message: line_separator_platform_mac_os_9 in: org.eclipse.core.internal.runtime.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:32:31.425
+!MESSAGE NLS unused message: ViewsPreference_currentPresentation in: org.eclipse.ui.internal.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:32:31.425
+!MESSAGE NLS unused message: ViewsPreference_currentPresentationFormat in: org.eclipse.ui.internal.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:32:31.426
+!MESSAGE NLS unused message: ViewsPreference_presentationConfirm_title in: org.eclipse.ui.internal.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:32:31.426
+!MESSAGE NLS unused message: ViewsPreference_presentationConfirm_message in: org.eclipse.ui.internal.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:32:31.426
+!MESSAGE NLS unused message: ViewsPreference_presentationConfirm_yes in: org.eclipse.ui.internal.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:32:31.426
+!MESSAGE NLS unused message: ViewsPreference_presentationConfirm_no in: org.eclipse.ui.internal.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:32:31.426
+!MESSAGE NLS unused message: ViewsPreference_editors in: org.eclipse.ui.internal.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:32:31.426
+!MESSAGE NLS unused message: ViewsPreference_editors_top in: org.eclipse.ui.internal.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:32:31.426
+!MESSAGE NLS unused message: ViewsPreference_editors_bottom in: org.eclipse.ui.internal.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:32:31.426
+!MESSAGE NLS unused message: ViewsPreference_views in: org.eclipse.ui.internal.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:32:31.427
+!MESSAGE NLS unused message: ViewsPreference_views_top in: org.eclipse.ui.internal.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:32:31.427
+!MESSAGE NLS unused message: ViewsPreference_views_bottom in: org.eclipse.ui.internal.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:32:31.427
+!MESSAGE NLS unused message: ViewsPreference_perspectiveBar in: org.eclipse.ui.internal.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:32:31.427
+!MESSAGE NLS unused message: ViewsPreference_perspectiveBar_topRight in: org.eclipse.ui.internal.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:32:31.427
+!MESSAGE NLS unused message: ViewsPreference_perspectiveBar_topLeft in: org.eclipse.ui.internal.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:32:31.427
+!MESSAGE NLS unused message: ViewsPreference_perspectiveBar_left in: org.eclipse.ui.internal.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:32:31.427
+!MESSAGE NLS unused message: ViewsPreference_traditionalTabs in: org.eclipse.ui.internal.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:32:31.427
+!MESSAGE NLS unused message: ViewsPreference_currentTheme in: org.eclipse.ui.internal.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:32:31.427
+!MESSAGE NLS unused message: ViewsPreference_currentThemeDescription in: org.eclipse.ui.internal.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:32:31.428
+!MESSAGE NLS unused message: ViewsPreference_override in: org.eclipse.ui.internal.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:32:31.428
+!MESSAGE NLS unused message: ViewsPreference_currentThemeFormat in: org.eclipse.ui.internal.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:32:31.428
+!MESSAGE NLS unused message: ViewsPreference_restartRequestJobName in: org.eclipse.ui.internal.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:32:31.761
+!MESSAGE NLS unused message: OpenResourceDialog_openWithButton_toolTip in: org.eclipse.ui.internal.ide.messages
+
+!ENTRY org.eclipse.ui 4 4 2014-03-28 16:32:44.734
+!MESSAGE Unable to find Action Set: org.codehaus.groovy.eclipse.quickfix.actionSet
+
+!ENTRY org.eclipse.ui 4 4 2014-03-28 16:32:44.737
+!MESSAGE Unable to find Action Set: org.codehaus.groovy.eclipse.ui.groovyElementCreation
+
+!ENTRY org.eclipse.ui 4 4 2014-03-28 16:32:44.738
+!MESSAGE Unable to find Action Set: ajrefactoring
+
+!ENTRY org.eclipse.ui 4 4 2014-03-28 16:32:44.738
+!MESSAGE Unable to find Action Set: org.eclipse.contribution.xref.ui.XRefActionSet
+
+!ENTRY org.eclipse.ui 4 4 2014-03-28 16:32:44.738
+!MESSAGE Unable to find Action Set: org.eclipse.mylyn.context.ui.actionSet
+
+!ENTRY org.eclipse.ui 4 4 2014-03-28 16:32:44.738
+!MESSAGE Unable to find Action Set: org.eclipse.mylyn.doc.actionSet
+
+!ENTRY org.eclipse.ui 4 4 2014-03-28 16:32:44.738
+!MESSAGE Unable to find Action Set: org.eclipse.mylyn.tasks.ui.navigation
+
+!ENTRY org.eclipse.ui 4 4 2014-03-28 16:32:44.739
+!MESSAGE Unable to find Action Set: org.eclipse.rse.core.search.searchActionSet
+
+!ENTRY org.eclipse.ui 4 4 2014-03-28 16:32:44.739
+!MESSAGE Unable to find Action Set: org.grails.ide.eclipse.ui.actionSetGlobal
+
+!ENTRY org.eclipse.ui 4 4 2014-03-28 16:32:44.739
+!MESSAGE Unable to find Action Set: org.springsource.ide.eclipse.quicksearch.actionSet
+
+!ENTRY org.eclipse.ui 4 4 2014-03-28 16:32:44.739
+!MESSAGE Unable to find Action Set: org.springsource.ide.eclipse.commons.launch.actionSet
+
+!ENTRY org.eclipse.ui 4 4 2014-03-28 16:32:44.740
+!MESSAGE Unable to find Action Set: com.springsource.sts.ide.ui.actionSet.workbench
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:32:45.209
+!MESSAGE NLS unused message: JavaEditorPreferencePage_highlightMatchingBrackets in: org.eclipse.jdt.internal.ui.preferences.PreferencesMessages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:32:45.462
+!MESSAGE NLS unused message: LaunchConfigurationWorkingCopy_6 in: org.eclipse.debug.internal.core.DebugCoreMessages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:32:45.463
+!MESSAGE NLS unused message: LaunchConfigurationWorkingCopy_7 in: org.eclipse.debug.internal.core.DebugCoreMessages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:32:45.463
+!MESSAGE NLS unused message: LaunchConfigurationWorkingCopy_8 in: org.eclipse.debug.internal.core.DebugCoreMessages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:32:45.464
+!MESSAGE NLS unused message: LaunchConfigurationType_0 in: org.eclipse.debug.internal.core.DebugCoreMessages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:32:45.464
+!MESSAGE NLS unused message: LaunchConfigurationType_1 in: org.eclipse.debug.internal.core.DebugCoreMessages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:32:45.789
+!MESSAGE NLS unused message: GotoMatchingBracket_error_invalidSelection in: org.eclipse.jdt.internal.ui.javaeditor.JavaEditorMessages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:32:46.054
+!MESSAGE NLS unused message: StandardVMType_Standard_VM_not_supported_on_MacOS__1 in: org.eclipse.jdt.internal.launching.LaunchingMessages
+
+!ENTRY org.eclipse.team.core 4 0 2014-03-28 16:32:49.035
+!MESSAGE Impossible d'instancier le fournisseur org.eclipse.egit.core.GitProvider pour le projet RemoteSystemsTempFiles.
+!STACK 1
+org.eclipse.team.core.TeamException: Impossible d'instancier le fournisseur org.eclipse.egit.core.GitProvider pour le projet RemoteSystemsTempFiles.
+	at org.eclipse.team.core.RepositoryProvider.mapNewProvider(RepositoryProvider.java:165)
+	at org.eclipse.team.core.RepositoryProvider.mapExistingProvider(RepositoryProvider.java:235)
+	at org.eclipse.team.core.RepositoryProvider.getProvider(RepositoryProvider.java:507)
+	at org.eclipse.team.internal.ccvs.ui.CVSLightweightDecorator.isMappedToCVS(CVSLightweightDecorator.java:192)
+	at org.eclipse.team.internal.ccvs.ui.CVSLightweightDecorator.decorate(CVSLightweightDecorator.java:147)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:263)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:81)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:365)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:347)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:371)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:331)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 1 org.eclipse.team.core 4 0 2014-03-28 16:32:49.036
+!MESSAGE Impossible d'instancier le fournisseur org.eclipse.egit.core.GitProvider pour le projet RemoteSystemsTempFiles.
+
+!ENTRY org.eclipse.team.core 4 0 2014-03-28 16:32:49.058
+!MESSAGE Impossible d'instancier le fournisseur org.eclipse.egit.core.GitProvider pour le projet ST1.
+!STACK 1
+org.eclipse.team.core.TeamException: Impossible d'instancier le fournisseur org.eclipse.egit.core.GitProvider pour le projet ST1.
+	at org.eclipse.team.core.RepositoryProvider.mapNewProvider(RepositoryProvider.java:165)
+	at org.eclipse.team.core.RepositoryProvider.mapExistingProvider(RepositoryProvider.java:235)
+	at org.eclipse.team.core.RepositoryProvider.getProvider(RepositoryProvider.java:507)
+	at org.eclipse.team.internal.ccvs.ui.CVSLightweightDecorator.isMappedToCVS(CVSLightweightDecorator.java:192)
+	at org.eclipse.team.internal.ccvs.ui.CVSLightweightDecorator.decorate(CVSLightweightDecorator.java:147)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:263)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:81)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:365)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:347)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:371)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:331)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 1 org.eclipse.team.core 4 0 2014-03-28 16:32:49.059
+!MESSAGE Impossible d'instancier le fournisseur org.eclipse.egit.core.GitProvider pour le projet ST1.
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2014-03-28 16:34:14.489
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10054 2014-03-28 16:34:14.489
+!MESSAGE Cannot complete the install because of a conflicting dependency.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.489
+!MESSAGE Software being installed: Eclipse Java Development Tools 3.9.2.v20140221-1700 (org.eclipse.jdt.feature.group 3.9.2.v20140221-1700)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.489
+!MESSAGE Software currently installed: Eclipse Platform 4.3.1.11fc20 (org.fedoraproject.eclipse.platform 4.3.1.11fc20)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-03-28 16:34:14.489
+!MESSAGE Only one of the following can be installed at once: 
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.489
+!MESSAGE Java Development Tools Core 3.9.1.v20131104-1241 (org.eclipse.jdt.core 3.9.1.v20131104-1241)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.489
+!MESSAGE Java Development Tools Core 3.9.0.v20130604-1421 (org.eclipse.jdt.core 3.9.0.v20130604-1421)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.489
+!MESSAGE Object Teams Development Tooling Core 3.9.2.v_OTDT_r222_201402180730 (org.eclipse.jdt.core 3.9.2.v_OTDT_r222_201402180730)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.490
+!MESSAGE Java Development Tools Core 3.9.1.v20130905-0837 (org.eclipse.jdt.core 3.9.1.v20130905-0837)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.490
+!MESSAGE Object Teams Development Tooling Core 3.9.0.v_OTDT_r220_201306071800 (org.eclipse.jdt.core 3.9.0.v_OTDT_r220_201306071800)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.490
+!MESSAGE Java Development Tools Core 3.9.2.v20140114-1555 (org.eclipse.jdt.core 3.9.2.v20140114-1555)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.490
+!MESSAGE Object Teams Development Tooling Core 3.9.1.v_OTDT_r221_201309101918 (org.eclipse.jdt.core 3.9.1.v_OTDT_r221_201309101918)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-03-28 16:34:14.490
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.490
+!MESSAGE From: Eclipse Java Development Tools 3.9.2.v20140221-1700 (org.eclipse.jdt.feature.group 3.9.2.v20140221-1700)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.490
+!MESSAGE To: org.eclipse.jdt.core [3.9.2.v20140114-1555]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-03-28 16:34:14.490
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.490
+!MESSAGE From: Eclipse Platform 4.3.1.v20131104-1241 (org.eclipse.platform.feature.group 4.3.1.v20131104-1241)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.490
+!MESSAGE To: org.eclipse.jdt.core [3.9.1.v20131104-1241]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-03-28 16:34:14.490
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.490
+!MESSAGE From: Eclipse Platform 4.3.1.11fc20 (org.fedoraproject.eclipse.platform 4.3.1.11fc20)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.490
+!MESSAGE To: org.eclipse.platform.feature.group [4.3.1.v20131104-1241]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2014-03-28 16:34:14.541
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10054 2014-03-28 16:34:14.541
+!MESSAGE Cannot complete the install because of a conflicting dependency.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.541
+!MESSAGE Software being installed: Eclipse Java Development Tools 3.9.2.v20140221-1700 (org.eclipse.jdt.feature.group 3.9.2.v20140221-1700)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.541
+!MESSAGE Software currently installed: Eclipse Platform 4.3.1.11fc20 (org.fedoraproject.eclipse.platform 4.3.1.11fc20)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-03-28 16:34:14.541
+!MESSAGE Only one of the following can be installed at once: 
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.541
+!MESSAGE Java Development Tools Core 3.9.1.v20131104-1241 (org.eclipse.jdt.core 3.9.1.v20131104-1241)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.541
+!MESSAGE Java Development Tools Core 3.9.0.v20130604-1421 (org.eclipse.jdt.core 3.9.0.v20130604-1421)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.541
+!MESSAGE Object Teams Development Tooling Core 3.9.2.v_OTDT_r222_201402180730 (org.eclipse.jdt.core 3.9.2.v_OTDT_r222_201402180730)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.541
+!MESSAGE Java Development Tools Core 3.9.1.v20130905-0837 (org.eclipse.jdt.core 3.9.1.v20130905-0837)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.541
+!MESSAGE Object Teams Development Tooling Core 3.9.0.v_OTDT_r220_201306071800 (org.eclipse.jdt.core 3.9.0.v_OTDT_r220_201306071800)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.541
+!MESSAGE Java Development Tools Core 3.9.2.v20140114-1555 (org.eclipse.jdt.core 3.9.2.v20140114-1555)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.541
+!MESSAGE Object Teams Development Tooling Core 3.9.1.v_OTDT_r221_201309101918 (org.eclipse.jdt.core 3.9.1.v_OTDT_r221_201309101918)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-03-28 16:34:14.541
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.541
+!MESSAGE From: Eclipse Java Development Tools 3.9.2.v20140221-1700 (org.eclipse.jdt.feature.group 3.9.2.v20140221-1700)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.541
+!MESSAGE To: org.eclipse.jdt.core [3.9.2.v20140114-1555]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-03-28 16:34:14.541
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.541
+!MESSAGE From: Eclipse Platform 4.3.1.v20131104-1241 (org.eclipse.platform.feature.group 4.3.1.v20131104-1241)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.541
+!MESSAGE To: org.eclipse.jdt.core [3.9.1.v20131104-1241]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-03-28 16:34:14.541
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.541
+!MESSAGE From: Eclipse Platform 4.3.1.11fc20 (org.fedoraproject.eclipse.platform 4.3.1.11fc20)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.542
+!MESSAGE To: org.eclipse.platform.feature.group [4.3.1.v20131104-1241]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2014-03-28 16:34:14.630
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10054 2014-03-28 16:34:14.630
+!MESSAGE Cannot complete the install because of a conflicting dependency.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.630
+!MESSAGE Software being installed: Eclipse Java Development Tools 3.9.2.v20140221-1700 (org.eclipse.jdt.feature.group 3.9.2.v20140221-1700)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.630
+!MESSAGE Software currently installed: Eclipse Platform 4.3.1.11fc20 (org.fedoraproject.eclipse.platform 4.3.1.11fc20)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-03-28 16:34:14.630
+!MESSAGE Only one of the following can be installed at once: 
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.630
+!MESSAGE Java Development Tools Core 3.9.1.v20131104-1241 (org.eclipse.jdt.core 3.9.1.v20131104-1241)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.630
+!MESSAGE Java Development Tools Core 3.9.0.v20130604-1421 (org.eclipse.jdt.core 3.9.0.v20130604-1421)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.630
+!MESSAGE Object Teams Development Tooling Core 3.9.2.v_OTDT_r222_201402180730 (org.eclipse.jdt.core 3.9.2.v_OTDT_r222_201402180730)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.630
+!MESSAGE Java Development Tools Core 3.9.1.v20130905-0837 (org.eclipse.jdt.core 3.9.1.v20130905-0837)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.630
+!MESSAGE Object Teams Development Tooling Core 3.9.0.v_OTDT_r220_201306071800 (org.eclipse.jdt.core 3.9.0.v_OTDT_r220_201306071800)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.630
+!MESSAGE Java Development Tools Core 3.9.2.v20140114-1555 (org.eclipse.jdt.core 3.9.2.v20140114-1555)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.630
+!MESSAGE Object Teams Development Tooling Core 3.9.1.v_OTDT_r221_201309101918 (org.eclipse.jdt.core 3.9.1.v_OTDT_r221_201309101918)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-03-28 16:34:14.630
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.630
+!MESSAGE From: Eclipse Java Development Tools 3.9.2.v20140221-1700 (org.eclipse.jdt.feature.group 3.9.2.v20140221-1700)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.630
+!MESSAGE To: org.eclipse.jdt.core [3.9.2.v20140114-1555]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-03-28 16:34:14.630
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.630
+!MESSAGE From: Eclipse Platform 4.3.1.v20131104-1241 (org.eclipse.platform.feature.group 4.3.1.v20131104-1241)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.630
+!MESSAGE To: org.eclipse.jdt.core [3.9.1.v20131104-1241]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-03-28 16:34:14.630
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.631
+!MESSAGE From: Eclipse Platform 4.3.1.11fc20 (org.fedoraproject.eclipse.platform 4.3.1.11fc20)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.631
+!MESSAGE To: org.eclipse.platform.feature.group [4.3.1.v20131104-1241]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2014-03-28 16:34:14.631
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10054 2014-03-28 16:34:14.631
+!MESSAGE Cannot complete the install because of a conflicting dependency.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.631
+!MESSAGE Software being installed: Eclipse Java Development Tools 3.9.2.v20140221-1700 (org.eclipse.jdt.feature.group 3.9.2.v20140221-1700)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.632
+!MESSAGE Software currently installed: Eclipse Platform 4.3.1.11fc20 (org.fedoraproject.eclipse.platform 4.3.1.11fc20)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-03-28 16:34:14.632
+!MESSAGE Only one of the following can be installed at once: 
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.632
+!MESSAGE Java Development Tools Core 3.9.1.v20131104-1241 (org.eclipse.jdt.core 3.9.1.v20131104-1241)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.632
+!MESSAGE Java Development Tools Core 3.9.0.v20130604-1421 (org.eclipse.jdt.core 3.9.0.v20130604-1421)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.632
+!MESSAGE Object Teams Development Tooling Core 3.9.2.v_OTDT_r222_201402180730 (org.eclipse.jdt.core 3.9.2.v_OTDT_r222_201402180730)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.632
+!MESSAGE Java Development Tools Core 3.9.1.v20130905-0837 (org.eclipse.jdt.core 3.9.1.v20130905-0837)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.632
+!MESSAGE Object Teams Development Tooling Core 3.9.0.v_OTDT_r220_201306071800 (org.eclipse.jdt.core 3.9.0.v_OTDT_r220_201306071800)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.632
+!MESSAGE Java Development Tools Core 3.9.2.v20140114-1555 (org.eclipse.jdt.core 3.9.2.v20140114-1555)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.632
+!MESSAGE Object Teams Development Tooling Core 3.9.1.v_OTDT_r221_201309101918 (org.eclipse.jdt.core 3.9.1.v_OTDT_r221_201309101918)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-03-28 16:34:14.632
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.632
+!MESSAGE From: Eclipse Java Development Tools 3.9.2.v20140221-1700 (org.eclipse.jdt.feature.group 3.9.2.v20140221-1700)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.632
+!MESSAGE To: org.eclipse.jdt.core [3.9.2.v20140114-1555]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-03-28 16:34:14.632
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.632
+!MESSAGE From: Eclipse Platform 4.3.1.v20131104-1241 (org.eclipse.platform.feature.group 4.3.1.v20131104-1241)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.632
+!MESSAGE To: org.eclipse.jdt.core [3.9.1.v20131104-1241]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-03-28 16:34:14.632
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.632
+!MESSAGE From: Eclipse Platform 4.3.1.11fc20 (org.fedoraproject.eclipse.platform 4.3.1.11fc20)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:34:14.632
+!MESSAGE To: org.eclipse.platform.feature.group [4.3.1.v20131104-1241]
+!SESSION 2014-03-28 16:35:12.328 -----------------------------------------------
+eclipse.buildId=4.3.0.11fc20
+java.version=1.7.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=fr_FR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:35:21.336
+!MESSAGE NLS unused message: line_separator_platform_mac_os_9 in: org.eclipse.core.internal.runtime.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:35:21.929
+!MESSAGE NLS unused message: ViewsPreference_currentPresentation in: org.eclipse.ui.internal.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:35:21.929
+!MESSAGE NLS unused message: ViewsPreference_currentPresentationFormat in: org.eclipse.ui.internal.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:35:21.929
+!MESSAGE NLS unused message: ViewsPreference_presentationConfirm_title in: org.eclipse.ui.internal.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:35:21.929
+!MESSAGE NLS unused message: ViewsPreference_presentationConfirm_message in: org.eclipse.ui.internal.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:35:21.929
+!MESSAGE NLS unused message: ViewsPreference_presentationConfirm_yes in: org.eclipse.ui.internal.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:35:21.930
+!MESSAGE NLS unused message: ViewsPreference_presentationConfirm_no in: org.eclipse.ui.internal.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:35:21.930
+!MESSAGE NLS unused message: ViewsPreference_editors in: org.eclipse.ui.internal.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:35:21.930
+!MESSAGE NLS unused message: ViewsPreference_editors_top in: org.eclipse.ui.internal.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:35:21.930
+!MESSAGE NLS unused message: ViewsPreference_editors_bottom in: org.eclipse.ui.internal.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:35:21.930
+!MESSAGE NLS unused message: ViewsPreference_views in: org.eclipse.ui.internal.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:35:21.930
+!MESSAGE NLS unused message: ViewsPreference_views_top in: org.eclipse.ui.internal.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:35:21.930
+!MESSAGE NLS unused message: ViewsPreference_views_bottom in: org.eclipse.ui.internal.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:35:21.930
+!MESSAGE NLS unused message: ViewsPreference_perspectiveBar in: org.eclipse.ui.internal.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:35:21.930
+!MESSAGE NLS unused message: ViewsPreference_perspectiveBar_topRight in: org.eclipse.ui.internal.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:35:21.930
+!MESSAGE NLS unused message: ViewsPreference_perspectiveBar_topLeft in: org.eclipse.ui.internal.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:35:21.930
+!MESSAGE NLS unused message: ViewsPreference_perspectiveBar_left in: org.eclipse.ui.internal.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:35:21.930
+!MESSAGE NLS unused message: ViewsPreference_traditionalTabs in: org.eclipse.ui.internal.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:35:21.931
+!MESSAGE NLS unused message: ViewsPreference_currentTheme in: org.eclipse.ui.internal.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:35:21.931
+!MESSAGE NLS unused message: ViewsPreference_currentThemeDescription in: org.eclipse.ui.internal.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:35:21.931
+!MESSAGE NLS unused message: ViewsPreference_override in: org.eclipse.ui.internal.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:35:21.931
+!MESSAGE NLS unused message: ViewsPreference_currentThemeFormat in: org.eclipse.ui.internal.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:35:21.931
+!MESSAGE NLS unused message: ViewsPreference_restartRequestJobName in: org.eclipse.ui.internal.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:35:22.238
+!MESSAGE NLS unused message: OpenResourceDialog_openWithButton_toolTip in: org.eclipse.ui.internal.ide.messages
+
+!ENTRY org.eclipse.ui 4 4 2014-03-28 16:35:27.569
+!MESSAGE Unable to find Action Set: org.codehaus.groovy.eclipse.quickfix.actionSet
+
+!ENTRY org.eclipse.ui 4 4 2014-03-28 16:35:27.572
+!MESSAGE Unable to find Action Set: org.codehaus.groovy.eclipse.ui.groovyElementCreation
+
+!ENTRY org.eclipse.ui 4 4 2014-03-28 16:35:27.573
+!MESSAGE Unable to find Action Set: ajrefactoring
+
+!ENTRY org.eclipse.ui 4 4 2014-03-28 16:35:27.573
+!MESSAGE Unable to find Action Set: org.eclipse.contribution.xref.ui.XRefActionSet
+
+!ENTRY org.eclipse.ui 4 4 2014-03-28 16:35:27.573
+!MESSAGE Unable to find Action Set: org.eclipse.mylyn.context.ui.actionSet
+
+!ENTRY org.eclipse.ui 4 4 2014-03-28 16:35:27.573
+!MESSAGE Unable to find Action Set: org.eclipse.mylyn.doc.actionSet
+
+!ENTRY org.eclipse.ui 4 4 2014-03-28 16:35:27.573
+!MESSAGE Unable to find Action Set: org.eclipse.mylyn.tasks.ui.navigation
+
+!ENTRY org.eclipse.ui 4 4 2014-03-28 16:35:27.574
+!MESSAGE Unable to find Action Set: org.eclipse.rse.core.search.searchActionSet
+
+!ENTRY org.eclipse.ui 4 4 2014-03-28 16:35:27.574
+!MESSAGE Unable to find Action Set: org.grails.ide.eclipse.ui.actionSetGlobal
+
+!ENTRY org.eclipse.ui 4 4 2014-03-28 16:35:27.574
+!MESSAGE Unable to find Action Set: org.springsource.ide.eclipse.quicksearch.actionSet
+
+!ENTRY org.eclipse.ui 4 4 2014-03-28 16:35:27.574
+!MESSAGE Unable to find Action Set: org.springsource.ide.eclipse.commons.launch.actionSet
+
+!ENTRY org.eclipse.ui 4 4 2014-03-28 16:35:27.574
+!MESSAGE Unable to find Action Set: com.springsource.sts.ide.ui.actionSet.workbench
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:35:27.921
+!MESSAGE NLS unused message: JavaEditorPreferencePage_highlightMatchingBrackets in: org.eclipse.jdt.internal.ui.preferences.PreferencesMessages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:35:28.065
+!MESSAGE NLS unused message: LaunchConfigurationWorkingCopy_6 in: org.eclipse.debug.internal.core.DebugCoreMessages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:35:28.065
+!MESSAGE NLS unused message: LaunchConfigurationWorkingCopy_7 in: org.eclipse.debug.internal.core.DebugCoreMessages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:35:28.066
+!MESSAGE NLS unused message: LaunchConfigurationWorkingCopy_8 in: org.eclipse.debug.internal.core.DebugCoreMessages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:35:28.066
+!MESSAGE NLS unused message: LaunchConfigurationType_0 in: org.eclipse.debug.internal.core.DebugCoreMessages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:35:28.066
+!MESSAGE NLS unused message: LaunchConfigurationType_1 in: org.eclipse.debug.internal.core.DebugCoreMessages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:35:28.363
+!MESSAGE NLS unused message: GotoMatchingBracket_error_invalidSelection in: org.eclipse.jdt.internal.ui.javaeditor.JavaEditorMessages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-28 16:35:28.667
+!MESSAGE NLS unused message: StandardVMType_Standard_VM_not_supported_on_MacOS__1 in: org.eclipse.jdt.internal.launching.LaunchingMessages
+
+!ENTRY org.eclipse.team.core 4 0 2014-03-28 16:35:31.166
+!MESSAGE Impossible d'instancier le fournisseur org.eclipse.egit.core.GitProvider pour le projet RemoteSystemsTempFiles.
+!STACK 1
+org.eclipse.team.core.TeamException: Impossible d'instancier le fournisseur org.eclipse.egit.core.GitProvider pour le projet RemoteSystemsTempFiles.
+	at org.eclipse.team.core.RepositoryProvider.mapNewProvider(RepositoryProvider.java:165)
+	at org.eclipse.team.core.RepositoryProvider.mapExistingProvider(RepositoryProvider.java:235)
+	at org.eclipse.team.core.RepositoryProvider.getProvider(RepositoryProvider.java:507)
+	at org.eclipse.team.internal.ccvs.ui.CVSLightweightDecorator.isMappedToCVS(CVSLightweightDecorator.java:192)
+	at org.eclipse.team.internal.ccvs.ui.CVSLightweightDecorator.decorate(CVSLightweightDecorator.java:147)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:263)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:81)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:365)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:347)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:371)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:331)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 1 org.eclipse.team.core 4 0 2014-03-28 16:35:31.168
+!MESSAGE Impossible d'instancier le fournisseur org.eclipse.egit.core.GitProvider pour le projet RemoteSystemsTempFiles.
+
+!ENTRY org.eclipse.team.core 4 0 2014-03-28 16:35:31.185
+!MESSAGE Impossible d'instancier le fournisseur org.eclipse.egit.core.GitProvider pour le projet ST1.
+!STACK 1
+org.eclipse.team.core.TeamException: Impossible d'instancier le fournisseur org.eclipse.egit.core.GitProvider pour le projet ST1.
+	at org.eclipse.team.core.RepositoryProvider.mapNewProvider(RepositoryProvider.java:165)
+	at org.eclipse.team.core.RepositoryProvider.mapExistingProvider(RepositoryProvider.java:235)
+	at org.eclipse.team.core.RepositoryProvider.getProvider(RepositoryProvider.java:507)
+	at org.eclipse.team.internal.ccvs.ui.CVSLightweightDecorator.isMappedToCVS(CVSLightweightDecorator.java:192)
+	at org.eclipse.team.internal.ccvs.ui.CVSLightweightDecorator.decorate(CVSLightweightDecorator.java:147)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:263)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:81)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:365)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:347)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:371)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:331)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 1 org.eclipse.team.core 4 0 2014-03-28 16:35:31.185
+!MESSAGE Impossible d'instancier le fournisseur org.eclipse.egit.core.GitProvider pour le projet ST1.
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2014-03-28 16:40:35.028
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 1 10001 2014-03-28 16:40:35.028
+!MESSAGE Your original request has been modified.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2014-03-28 16:40:35.028
+!MESSAGE "Eclipse Java Development Tools" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2014-03-28 16:40:35.028
+!MESSAGE "Eclipse JDT Plug-in Developer Resources" is already installed, so an update will be performed instead.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10054 2014-03-28 16:40:35.028
+!MESSAGE Cannot complete the install because of a conflicting dependency.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.028
+!MESSAGE Software being installed: Eclipse Java Development Tools 3.9.2.v20140221-1700 (org.eclipse.jdt.feature.group 3.9.2.v20140221-1700)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.028
+!MESSAGE Software currently installed: Eclipse Platform 4.3.1.11fc20 (org.fedoraproject.eclipse.platform 4.3.1.11fc20)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-03-28 16:40:35.028
+!MESSAGE Only one of the following can be installed at once: 
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.028
+!MESSAGE Java Development Tools Core 3.9.1.v20131104-1241 (org.eclipse.jdt.core 3.9.1.v20131104-1241)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.028
+!MESSAGE Java Development Tools Core 3.9.0.v20130604-1421 (org.eclipse.jdt.core 3.9.0.v20130604-1421)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.028
+!MESSAGE Object Teams Development Tooling Core 3.9.2.v_OTDT_r222_201402180730 (org.eclipse.jdt.core 3.9.2.v_OTDT_r222_201402180730)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.028
+!MESSAGE Java Development Tools Core 3.9.1.v20130905-0837 (org.eclipse.jdt.core 3.9.1.v20130905-0837)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.028
+!MESSAGE Object Teams Development Tooling Core 3.9.0.v_OTDT_r220_201306071800 (org.eclipse.jdt.core 3.9.0.v_OTDT_r220_201306071800)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.028
+!MESSAGE Java Development Tools Core 3.9.2.v20140114-1555 (org.eclipse.jdt.core 3.9.2.v20140114-1555)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.028
+!MESSAGE Object Teams Development Tooling Core 3.9.1.v_OTDT_r221_201309101918 (org.eclipse.jdt.core 3.9.1.v_OTDT_r221_201309101918)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-03-28 16:40:35.028
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.028
+!MESSAGE From: Eclipse Java Development Tools 3.9.2.v20140221-1700 (org.eclipse.jdt.feature.group 3.9.2.v20140221-1700)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.028
+!MESSAGE To: org.eclipse.jdt.core [3.9.2.v20140114-1555]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-03-28 16:40:35.028
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.028
+!MESSAGE From: Eclipse Platform 4.3.1.v20131104-1241 (org.eclipse.platform.feature.group 4.3.1.v20131104-1241)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.028
+!MESSAGE To: org.eclipse.jdt.core [3.9.1.v20131104-1241]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-03-28 16:40:35.028
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.028
+!MESSAGE From: Eclipse Platform 4.3.1.11fc20 (org.fedoraproject.eclipse.platform 4.3.1.11fc20)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.028
+!MESSAGE To: org.eclipse.platform.feature.group [4.3.1.v20131104-1241]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2014-03-28 16:40:35.033
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 1 10001 2014-03-28 16:40:35.033
+!MESSAGE Your original request has been modified.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2014-03-28 16:40:35.033
+!MESSAGE "Eclipse Java Development Tools" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2014-03-28 16:40:35.033
+!MESSAGE "Eclipse JDT Plug-in Developer Resources" is already installed, so an update will be performed instead.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10054 2014-03-28 16:40:35.033
+!MESSAGE Cannot complete the install because of a conflicting dependency.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.033
+!MESSAGE Software being installed: Eclipse Java Development Tools 3.9.2.v20140221-1700 (org.eclipse.jdt.feature.group 3.9.2.v20140221-1700)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.033
+!MESSAGE Software currently installed: Eclipse Platform 4.3.1.11fc20 (org.fedoraproject.eclipse.platform 4.3.1.11fc20)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-03-28 16:40:35.033
+!MESSAGE Only one of the following can be installed at once: 
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.033
+!MESSAGE Java Development Tools Core 3.9.1.v20131104-1241 (org.eclipse.jdt.core 3.9.1.v20131104-1241)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.033
+!MESSAGE Java Development Tools Core 3.9.0.v20130604-1421 (org.eclipse.jdt.core 3.9.0.v20130604-1421)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.033
+!MESSAGE Object Teams Development Tooling Core 3.9.2.v_OTDT_r222_201402180730 (org.eclipse.jdt.core 3.9.2.v_OTDT_r222_201402180730)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.033
+!MESSAGE Java Development Tools Core 3.9.1.v20130905-0837 (org.eclipse.jdt.core 3.9.1.v20130905-0837)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.033
+!MESSAGE Object Teams Development Tooling Core 3.9.0.v_OTDT_r220_201306071800 (org.eclipse.jdt.core 3.9.0.v_OTDT_r220_201306071800)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.033
+!MESSAGE Java Development Tools Core 3.9.2.v20140114-1555 (org.eclipse.jdt.core 3.9.2.v20140114-1555)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.033
+!MESSAGE Object Teams Development Tooling Core 3.9.1.v_OTDT_r221_201309101918 (org.eclipse.jdt.core 3.9.1.v_OTDT_r221_201309101918)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-03-28 16:40:35.033
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.033
+!MESSAGE From: Eclipse Java Development Tools 3.9.2.v20140221-1700 (org.eclipse.jdt.feature.group 3.9.2.v20140221-1700)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.033
+!MESSAGE To: org.eclipse.jdt.core [3.9.2.v20140114-1555]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-03-28 16:40:35.033
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.033
+!MESSAGE From: Eclipse Platform 4.3.1.v20131104-1241 (org.eclipse.platform.feature.group 4.3.1.v20131104-1241)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.033
+!MESSAGE To: org.eclipse.jdt.core [3.9.1.v20131104-1241]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-03-28 16:40:35.033
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.033
+!MESSAGE From: Eclipse Platform 4.3.1.11fc20 (org.fedoraproject.eclipse.platform 4.3.1.11fc20)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.033
+!MESSAGE To: org.eclipse.platform.feature.group [4.3.1.v20131104-1241]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2014-03-28 16:40:35.045
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 1 10001 2014-03-28 16:40:35.045
+!MESSAGE Your original request has been modified.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2014-03-28 16:40:35.045
+!MESSAGE "Eclipse Java Development Tools" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2014-03-28 16:40:35.045
+!MESSAGE "Eclipse JDT Plug-in Developer Resources" is already installed, so an update will be performed instead.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10054 2014-03-28 16:40:35.046
+!MESSAGE Cannot complete the install because of a conflicting dependency.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.046
+!MESSAGE Software being installed: Eclipse Java Development Tools 3.9.2.v20140221-1700 (org.eclipse.jdt.feature.group 3.9.2.v20140221-1700)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.046
+!MESSAGE Software currently installed: Eclipse Platform 4.3.1.11fc20 (org.fedoraproject.eclipse.platform 4.3.1.11fc20)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-03-28 16:40:35.046
+!MESSAGE Only one of the following can be installed at once: 
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.046
+!MESSAGE Java Development Tools Core 3.9.1.v20131104-1241 (org.eclipse.jdt.core 3.9.1.v20131104-1241)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.046
+!MESSAGE Java Development Tools Core 3.9.0.v20130604-1421 (org.eclipse.jdt.core 3.9.0.v20130604-1421)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.046
+!MESSAGE Object Teams Development Tooling Core 3.9.2.v_OTDT_r222_201402180730 (org.eclipse.jdt.core 3.9.2.v_OTDT_r222_201402180730)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.046
+!MESSAGE Java Development Tools Core 3.9.1.v20130905-0837 (org.eclipse.jdt.core 3.9.1.v20130905-0837)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.046
+!MESSAGE Object Teams Development Tooling Core 3.9.0.v_OTDT_r220_201306071800 (org.eclipse.jdt.core 3.9.0.v_OTDT_r220_201306071800)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.046
+!MESSAGE Java Development Tools Core 3.9.2.v20140114-1555 (org.eclipse.jdt.core 3.9.2.v20140114-1555)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.046
+!MESSAGE Object Teams Development Tooling Core 3.9.1.v_OTDT_r221_201309101918 (org.eclipse.jdt.core 3.9.1.v_OTDT_r221_201309101918)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-03-28 16:40:35.046
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.046
+!MESSAGE From: Eclipse Java Development Tools 3.9.2.v20140221-1700 (org.eclipse.jdt.feature.group 3.9.2.v20140221-1700)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.046
+!MESSAGE To: org.eclipse.jdt.core [3.9.2.v20140114-1555]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-03-28 16:40:35.046
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.046
+!MESSAGE From: Eclipse Platform 4.3.1.v20131104-1241 (org.eclipse.platform.feature.group 4.3.1.v20131104-1241)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.046
+!MESSAGE To: org.eclipse.jdt.core [3.9.1.v20131104-1241]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-03-28 16:40:35.046
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.046
+!MESSAGE From: Eclipse Platform 4.3.1.11fc20 (org.fedoraproject.eclipse.platform 4.3.1.11fc20)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.046
+!MESSAGE To: org.eclipse.platform.feature.group [4.3.1.v20131104-1241]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2014-03-28 16:40:35.047
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 1 10001 2014-03-28 16:40:35.047
+!MESSAGE Your original request has been modified.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2014-03-28 16:40:35.047
+!MESSAGE "Eclipse Java Development Tools" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2014-03-28 16:40:35.047
+!MESSAGE "Eclipse JDT Plug-in Developer Resources" is already installed, so an update will be performed instead.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10054 2014-03-28 16:40:35.047
+!MESSAGE Cannot complete the install because of a conflicting dependency.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.047
+!MESSAGE Software being installed: Eclipse Java Development Tools 3.9.2.v20140221-1700 (org.eclipse.jdt.feature.group 3.9.2.v20140221-1700)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.047
+!MESSAGE Software currently installed: Eclipse Platform 4.3.1.11fc20 (org.fedoraproject.eclipse.platform 4.3.1.11fc20)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-03-28 16:40:35.047
+!MESSAGE Only one of the following can be installed at once: 
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.047
+!MESSAGE Java Development Tools Core 3.9.1.v20131104-1241 (org.eclipse.jdt.core 3.9.1.v20131104-1241)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.047
+!MESSAGE Java Development Tools Core 3.9.0.v20130604-1421 (org.eclipse.jdt.core 3.9.0.v20130604-1421)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.047
+!MESSAGE Object Teams Development Tooling Core 3.9.2.v_OTDT_r222_201402180730 (org.eclipse.jdt.core 3.9.2.v_OTDT_r222_201402180730)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.047
+!MESSAGE Java Development Tools Core 3.9.1.v20130905-0837 (org.eclipse.jdt.core 3.9.1.v20130905-0837)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.047
+!MESSAGE Object Teams Development Tooling Core 3.9.0.v_OTDT_r220_201306071800 (org.eclipse.jdt.core 3.9.0.v_OTDT_r220_201306071800)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.047
+!MESSAGE Java Development Tools Core 3.9.2.v20140114-1555 (org.eclipse.jdt.core 3.9.2.v20140114-1555)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.047
+!MESSAGE Object Teams Development Tooling Core 3.9.1.v_OTDT_r221_201309101918 (org.eclipse.jdt.core 3.9.1.v_OTDT_r221_201309101918)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-03-28 16:40:35.047
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.047
+!MESSAGE From: Eclipse Java Development Tools 3.9.2.v20140221-1700 (org.eclipse.jdt.feature.group 3.9.2.v20140221-1700)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.047
+!MESSAGE To: org.eclipse.jdt.core [3.9.2.v20140114-1555]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-03-28 16:40:35.047
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.047
+!MESSAGE From: Eclipse Platform 4.3.1.v20131104-1241 (org.eclipse.platform.feature.group 4.3.1.v20131104-1241)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.047
+!MESSAGE To: org.eclipse.jdt.core [3.9.1.v20131104-1241]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-03-28 16:40:35.047
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.047
+!MESSAGE From: Eclipse Platform 4.3.1.11fc20 (org.fedoraproject.eclipse.platform 4.3.1.11fc20)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-03-28 16:40:35.047
+!MESSAGE To: org.eclipse.platform.feature.group [4.3.1.v20131104-1241]
+!SESSION 2014-03-29 11:47:34.113 -----------------------------------------------
+eclipse.buildId=3.4.0.201310051614-RELEASE-e43
+java.version=1.7.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=fr_FR
+Framework arguments:  -product org.springsource.ggts.ide
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.springsource.ggts.ide
+
+!ENTRY org.eclipse.ui 4 4 2014-03-29 11:48:53.614
+!MESSAGE Conflicting handlers for org.eclipse.jdt.ui.edit.text.java.refactor.quickMenu: {org.eclipse.jdt.internal.ui.actions.JDTQuickMenuCreator$1@de2ab9d} vs {org.eclipse.jdt.internal.ui.actions.JDTQuickMenuCreator$1@1c70d78a}
+
+!ENTRY org.eclipse.ui 4 4 2014-03-29 11:49:08.174
+!MESSAGE Conflicting handlers for org.eclipse.jdt.ui.edit.text.java.refactor.quickMenu: {org.eclipse.jdt.internal.ui.actions.JDTQuickMenuCreator$1@de2ab9d} vs {org.eclipse.jdt.internal.ui.actions.JDTQuickMenuCreator$1@1c70d78a}
+
+!ENTRY org.eclipse.ui 4 4 2014-03-29 11:49:13.625
+!MESSAGE Conflicting handlers for org.eclipse.jdt.ui.edit.text.java.refactor.quickMenu: {org.eclipse.jdt.internal.ui.actions.JDTQuickMenuCreator$1@de2ab9d} vs {org.eclipse.jdt.internal.ui.actions.JDTQuickMenuCreator$1@1c70d78a}
+
+!ENTRY org.eclipse.ui 4 4 2014-03-29 11:53:21.851
+!MESSAGE Conflicting handlers for org.eclipse.jdt.ui.edit.text.java.refactor.quickMenu: {org.eclipse.jdt.internal.ui.actions.JDTQuickMenuCreator$1@de2ab9d} vs {org.eclipse.jdt.internal.ui.actions.JDTQuickMenuCreator$1@1c70d78a}
+
+!ENTRY org.eclipse.ui 4 4 2014-03-29 12:03:39.188
+!MESSAGE Conflicting handlers for org.eclipse.jdt.ui.edit.text.java.refactor.quickMenu: {org.eclipse.jdt.internal.ui.actions.JDTQuickMenuCreator$1@de2ab9d} vs {org.eclipse.jdt.internal.ui.actions.JDTQuickMenuCreator$1@1c70d78a}
+
+!ENTRY org.eclipse.ui 4 4 2014-03-29 12:36:23.679
+!MESSAGE Conflicting handlers for org.eclipse.jdt.ui.edit.text.java.refactor.quickMenu: {org.eclipse.jdt.internal.ui.actions.JDTQuickMenuCreator$1@de2ab9d} vs {org.eclipse.jdt.internal.ui.actions.JDTQuickMenuCreator$1@1c70d78a}
