@@ -1297,3 +1297,13 @@ Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.springsourc
 
 !ENTRY org.eclipse.ui 4 4 2014-03-29 12:36:23.679
 !MESSAGE Conflicting handlers for org.eclipse.jdt.ui.edit.text.java.refactor.quickMenu: {org.eclipse.jdt.internal.ui.actions.JDTQuickMenuCreator$1@de2ab9d} vs {org.eclipse.jdt.internal.ui.actions.JDTQuickMenuCreator$1@1c70d78a}
+!SESSION 2014-03-29 16:18:15.532 -----------------------------------------------
+eclipse.buildId=3.4.0.201310051614-RELEASE-e43
+java.version=1.7.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=fr_FR
+Framework arguments:  -product org.springsource.ggts.ide
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.springsource.ggts.ide
+
+!ENTRY org.eclipse.core.resources 2 10035 2014-03-29 16:18:39.098
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.

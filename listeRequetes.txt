@@ -1,3 +1,4 @@
+================================================================= ST1 =================================================================
 // récupérer l'id de la zone d'arret Paul sabatier
 http://pt.data.tisseo.fr/placesList?format=json&term=paul%20sabatier&displayOnlyStopAreas=1&number=1&key=a03561f2fd10641d96fb8188d209414d8
 
@@ -9,3 +10,17 @@ http://pt.data.tisseo.fr/placesList?format=json&term=faculte%20de%20pharmacie&di
 
 // récupérer l'id des bus qui passent par la zone d'arret faculté de pharmacie
 http://pt.data.tisseo.fr/departureBoard?format=json&stopPointId=1970324837185357&key=a03561f2fd10641d96fb8188d209414d8
+
+================================================================= ST2 =================================================================
+
+
+
+
+================================================================= ST3 =================================================================
+
+
+
+
+================================================================= ST4 =================================================================
+// Récuperer les infos de la station Paul Sab
+https://api.jcdecaux.com/vls/v1/stations/227?contract=Toulouse&apiKey=d3a6958a033987763c45e1311847f98909303f34
