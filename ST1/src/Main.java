@@ -12,10 +12,17 @@ public class Main
 		
 		String res = test.get();
 		
-		ParserJson pj = new ParserJson(res);
-		JSONObject jsonObj = pj.parse();
+		ParserJsonStop pj = new ParserJsonStop(res);
+		Place placePaulSab = pj.parse();
 		
-		System.out.println(jsonObj.toString());
-		System.out.println(jsonObj.get("id"));
+		//JSONObject jsonObj = new JSONObject(p);
+		
+		String requeteBusPaulSab = new String("http://pt.data.tisseo.fr/departureBoard?format=json&stopPointId="+placePaulSab.getId()+"&key=a03561f2fd10641d96fb8188d209414d8");
+		LaunchRequest requestListAreasPaulSab = new LaunchRequest(requeteBusPaulSab);
+		String resultAreasPaulSab = requestListAreasPaulSab.get();
+		
+		System.out.println(requeteBusPaulSab);
+		System.out.println(resultAreasPaulSab);
+		
 	}
 }

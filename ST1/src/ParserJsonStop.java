@@ -2,16 +2,16 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class ParserJson
+public class ParserJsonStop
 {
 	String json;
 	
-	public ParserJson (String json)
+	public ParserJsonStop (String json)
 	{
 		this.json = json;
 	}
 	
-	public JSONObject parse () throws JSONException
+	public Place parse () throws JSONException
 	{
 		JSONObject jsonObject = new JSONObject(json);
 		JSONObject innerJsonObject = jsonObject.getJSONObject("placesList");
@@ -29,8 +29,6 @@ public class ParserJson
 		p.setY(jsonArray.getJSONObject(0).getString("y"));
 		p.setKey(jsonArray.getJSONObject(0).getString("key"));
 		
-		JSONObject jsonObj = new JSONObject(p);
-		
-		return jsonObj;
+		return p;
 	}
 }
