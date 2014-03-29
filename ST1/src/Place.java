@@ -1,5 +1,6 @@
 
-public class Place {
+public class Place
+{
 	String label;
 	String category;
 	String key;
