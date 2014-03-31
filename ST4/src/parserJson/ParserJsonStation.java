@@ -1,5 +1,6 @@
 package parserJson;
 
+import gestionST4.Position;
 import gestionST4.Station;
 
 import org.json.JSONArray;
@@ -16,23 +17,29 @@ public class ParserJsonStation {
 	
 	public Station parse () throws JSONException
 	{
-		JSONObject jsonObject = new JSONObject(json);
-		JSONObject innerJsonObject = jsonObject.getJSONObject("placesList");
-		JSONArray jsonArray = innerJsonObject.getJSONArray("place");
+		JSONObject jsonObjectStation = new JSONObject(json);
+		JSONObject innerJsonObjectPos = jsonObjectStation.getJSONObject("position");
 		
 		Station s = new Station();
+		Position p = new Position();
 		
-		/*
-		p.setId(jsonArray.getJSONObject(0).getString("id"));
-		p.setRank(jsonArray.getJSONObject(0).getString("rank"));
-		p.setCategory(jsonArray.getJSONObject(0).getString("category"));
-		p.setClassName(jsonArray.getJSONObject(0).getString("className"));
-		p.setLabel(jsonArray.getJSONObject(0).getString("label"));
-		p.setNetwork(jsonArray.getJSONObject(0).getString("network"));
-		p.setX(jsonArray.getJSONObject(0).getString("x"));
-		p.setY(jsonArray.getJSONObject(0).getString("y"));
-		p.setKey(jsonArray.getJSONObject(0).getString("key"));
-		*/
+		// Recuperation des coordonnées de la station
+		p.setLat(innerJsonObjectPos.getDouble("lat"));
+		p.setLng(innerJsonObjectPos.getDouble("lng"));
+		
+		// Mise à jour de l'objet station selon le json
+		s.setPosition(p);
+		s.setNumber(jsonObjectStation.getInt("number"));
+		s.setName(jsonObjectStation.getString("name"));
+		s.setAddress(jsonObjectStation.getString("address"));
+		s.setBanking(jsonObjectStation.getBoolean("banking"));
+		s.setBonus(jsonObjectStation.getBoolean("bonus"));;
+		s.setStatus(jsonObjectStation.getString("status"));
+		s.setContract_name(jsonObjectStation.getString("contract_name"));
+		s.setBike_stands(jsonObjectStation.getInt("bike_stands"));
+		s.setAvailable_bike_stands(jsonObjectStation.getInt("available_bike_stands"));
+		s.setAvailable_bikes(jsonObjectStation.getInt("available_bikes"));
+		s.setLast_update(jsonObjectStation.getInt("last_update"));
 		
 		return s;
 	}

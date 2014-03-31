@@ -1,27 +1,22 @@
 package gestionST4;
 
 public class Position {
-	private int lat;
-	private int lng;
-	
-	public Position(int lat, int lng) {
-		this.lat = lat;
-		this.lng = lng;
-	}
+	private double lat;
+	private double lng;
 
-	public int getLat() {
+	public double getLat() {
 		return lat;
 	}
 
-	public void setLat(int lat) {
+	public void setLat(double lat) {
 		this.lat = lat;
 	}
 
-	public int getLng() {
+	public double getLng() {
 		return lng;
 	}
 
-	public void setLng(int lng) {
+	public void setLng(double lng) {
 		this.lng = lng;
 	}
 

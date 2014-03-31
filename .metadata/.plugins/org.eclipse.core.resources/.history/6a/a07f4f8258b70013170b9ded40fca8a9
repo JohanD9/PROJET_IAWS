@@ -1,0 +1,51 @@
+package parserJson;
+
+import gestionST4.Position;
+import gestionST4.Station;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+public class ParserJsonStation {
+	private String json;
+	
+	public ParserJsonStation (String json)
+	{
+		this.json = json;
+	}
+	
+	public Station parse () throws JSONException
+	{
+		JSONObject jsonObjectStation = new JSONObject(json);
+		JSONObject innerJsonObjectPos = jsonObjectStation.getJSONObject("position");
+		
+		Station s = new Station();
+		Position p = new Position();
+		
+		// Recuperation des coordonnées de la station
+		p.setLat(innerJsonObjectPos.getDouble("lat"));
+		p.setLng(innerJsonObjectPos.getDouble("lng"));
+		
+		// Mise à jour de l'objet station selon le json
+		s.setPosition(p);
+		s.setNumber(jsonObjectStation.getInt("number"));
+		s.setName(jsonObjectStation.getString("name"));
+
+		
+		
+		/*
+		p.setId(jsonArray.getJSONObject(0).getString("id"));
+		p.setRank(jsonArray.getJSONObject(0).getString("rank"));
+		p.setCategory(jsonArray.getJSONObject(0).getString("category"));
+		p.setClassName(jsonArray.getJSONObject(0).getString("className"));
+		p.setLabel(jsonArray.getJSONObject(0).getString("label"));
+		p.setNetwork(jsonArray.getJSONObject(0).getString("network"));
+		p.setX(jsonArray.getJSONObject(0).getString("x"));
+		p.setY(jsonArray.getJSONObject(0).getString("y"));
+		p.setKey(jsonArray.getJSONObject(0).getString("key"));
+		*/
+		
+		return s;
+	}
+}

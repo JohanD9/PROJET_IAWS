@@ -1,0 +1,17 @@
+package gestionST4;
+
+import java.awt.List;
+import java.util.ArrayList;
+
+public class GestionVelo {
+	private String station;
+	List<Station> listStations;
+
+	public GestionVelo(String stationTmp) {
+		this.station = stationTmp.toUpperCase();
+		listStations = new ArrayList<Sation>();
+	}
+	
+	
+
+}

@@ -1,0 +1,12 @@
+package gestionST4;
+
+public class GestionVelo {
+	private String station;
+
+	public GestionVelo(String stationTmp) {
+		this.station = stationTmp.toUpperCase();
+	}
+	
+	
+
+}
