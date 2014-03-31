@@ -1,0 +1,20 @@
+package gestionST4;
+
+import java.io.IOException;
+
+import org.json.JSONException;
+
+import parserJson.ParserJsonStation;
+import HTTPrequest.LaunchGetHTTP;
+
+public class main {
+
+	public static void main(String[] args) throws NumberFormatException, IOException, JSONException {
+		GestionVelo monGestionnaire = new GestionVelo();
+		
+		for(Station courante: list){
+			System.out.println(object)
+			}
+		
+	}
+}

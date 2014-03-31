@@ -1,0 +1,59 @@
+package parserJson;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+
+public class ParserJsonAreasList
+{
+	private String json;
+	
+	public ParserJsonAreasList(String json)
+	{
+		this.json = json;
+	}
+	
+	public List<Line> parse () throws JSONException
+	{
+		int i;
+		List<linearture> listeLine = new ArrayList<Line>();
+		Line line;
+		JSONObject innerJsonObjectlinearture;
+		JSONObject innerJsonObjectLine;
+		JSONArray innerJsonArrayDestination;
+		
+		JSONObject jsonObject = new JSONObject(json);
+		JSONObject innerJsonObject = jsonObject.getJSONObject("lineartures");
+		JSONArray jsonArray = innerJsonObject.getJSONArray("linearture");
+		
+		for(i=0; i<(jsonArray.length()-1); i++)
+		{
+			line = new Line();
+			innerJsonObjectlinearture = jsonArray.getJSONObject(i);
+			innerJsonObjectLine = innerJsonObjectlinearture.getJSONObject("line");
+			innerJsonArrayDestination = innerJsonObjectlinearture.getJSONArray("destination");
+			
+			line.setDateTime(innerJsonObjectlinearture.getString("dateTime"));
+			line.setRealTime(innerJsonObjectlinearture.getString("realTime"));
+			
+			line.getLine().setName(innerJsonObjectLine.getString("name"));
+			line.getLine().setShortName(innerJsonObjectLine.getString("shortName"));
+			line.getLine().setNetwork(innerJsonObjectLine.getString("network"));
+			line.getLine().setColor(innerJsonObjectLine.getString("color"));
+			
+			line.getDestination().setName(innerJsonArrayDestination.getJSONObject(0).getString("name"));
+			line.getDestination().setCityName(innerJsonArrayDestination.getJSONObject(0).getString("cityName"));
+			
+			listeline.add(line);
+			
+			innerJsonArrayDestination = null;
+			innerJsonObjectlinearture = null;
+			line = null;
+		}
+		
+		return (listeline);
+	}
+}
