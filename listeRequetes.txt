@@ -1,4 +1,4 @@
-================================================================= ST1 =================================================================
+﻿================================================================= ST1 =================================================================
 // récupérer l'id de la zone d'arret Paul sabatier
 http://pt.data.tisseo.fr/placesList?format=json&term=paul%20sabatier&displayOnlyStopAreas=1&number=1&key=a03561f2fd10641d96fb8188d209414d8
 
@@ -24,3 +24,12 @@ http://pt.data.tisseo.fr/departureBoard?format=json&stopPointId=1970324837185357
 ================================================================= ST4 =================================================================
 // Récuperer les infos de la station Paul Sab
 https://api.jcdecaux.com/vls/v1/stations/227?contract=Toulouse&apiKey=d3a6958a033987763c45e1311847f98909303f34
+
+
+
+================================================================= BDD =================================================================
+// json pour récupérer tous les documents id
+http://127.0.0.1:5984/tisseo/_all_docs
+
+//json pour récup les likes et dislikes
+http://127.0.0.1:5984/tisseo/"documentID"
