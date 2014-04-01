@@ -23,7 +23,7 @@
 					<a class="btn btn-navbar" data-toggle="collapse"
 						data-target=".nav-collapse"> <span class="icon-bar"></span> <span
 						class="icon-bar"></span> <span class="icon-bar"></span>
-					</a> <a class="brand" href="/LoupePasTonBus/index.php">LoopPasTonBuss</a>
+					</a> <a class="brand" href="/LoopPasTonBus/index.php">LoopPasTonBuss</a>
 					<!-- Structure du menu -->
 					<div class="nav-collapse collapse">
 						<ul class="nav">
@@ -36,9 +36,9 @@
 									<li><a href="#">Mon prochain métro</a></li>
 									<li class="divider"></li>
 									<li class="nav-header">VélôToulouse</li>
-									<li><a href="/LoupePasTonBus/velos.php">Les vélos dispos/libres</a></li>
+									<li><a href="/LoopPasTonBus/velos.php">Les vélos dispos/libres</a></li>
 								</ul></li>
-							<li><a href="/LoupePasTonBus/aPropos.php">A propos</a></li>
+							<li><a href="/LoopPasTonBus/aPropos.php">A propos</a></li>
 						</ul>
 					</div>
 				</div>
@@ -47,7 +47,7 @@
 			<!-- PremiÃ¨re ligne de notre grille -->
 			<div class="row show-grid">
 				<div class="span9">
-					<h2>Bienvenue sur LoupePasTonBus !</h2>
+					<h2>Bienvenue sur LoopPasTonBus !</h2>
 					<hr>
 					<img src="pictures/accueil.png" alt="Plan de Paul Sabatier">
 				</div>

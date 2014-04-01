@@ -24,7 +24,7 @@
 					<a class="btn btn-navbar" data-toggle="collapse"
 						data-target=".nav-collapse"> <span class="icon-bar"></span> <span
 						class="icon-bar"></span> <span class="icon-bar"></span>
-					</a> <a class="brand" href="/LoupePasTonBus/index.php">LoopPasTonBus</a>
+					</a> <a class="brand" href="/LoopPasTonBus/index.php">LoopPasTonBus</a>
 					<!-- Structure du menu -->
 					<div class="nav-collapse collapse">
 						<ul class="nav">
@@ -37,9 +37,9 @@
 									<li><a href="#">Mon prochain métro</a></li>
 									<li class="divider"></li>
 									<li class="nav-header">VélôToulouse</li>
-									<li><a href="/LoupePasTonBus/velos.php">Les vélos dispos/libres</a></li>
+									<li><a href="/LoopPasTonBus/velos.php">Les vélos dispos/libres</a></li>
 								</ul></li>
-							<li><a href="/LoupePasTonBus/aPropos.php">A propos</a></li>
+							<li><a href="/LoopPasTonBus/aPropos.php">A propos</a></li>
 						</ul>
 					</div>
 				</div>
