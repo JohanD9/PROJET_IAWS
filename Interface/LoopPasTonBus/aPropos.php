@@ -4,6 +4,7 @@
 <title>LoopPasTonBus</title>
 <!-- On ouvre la fenêtre à la largeur de l'écran -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
 <!-- Intégration du CSS Bootstrap -->
 <link href="bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
 <link href="css/style.css" rel="stylesheet" media="screen">
