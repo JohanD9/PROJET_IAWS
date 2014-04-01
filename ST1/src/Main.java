@@ -3,7 +3,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.json.JSONException;
-import org.json.JSONObject;
 
 public class Main {
 	public static void main(String[] args) throws IOException, JSONException {
@@ -17,7 +16,6 @@ public class Main {
 
 		ParserJsonStop pjPaulSab = new ParserJsonStop(resPaulSab);
 		Place placePaulSab = pjPaulSab.parse();
-		System.out.println(placePaulSab.toString());
 
 		/*
 		 * Récupération de la place Faculté de pharmacie
@@ -30,7 +28,6 @@ public class Main {
 
 		ParserJsonStop pjFacPharma = new ParserJsonStop(resFacPharma);
 		Place placeFacPharma = pjFacPharma.parse();
-		System.out.println(placeFacPharma.toString());
 		
 		/*
 		 * Récupération de la liste des lignes qui passent par l'arret Paul Sabatier
@@ -47,6 +44,29 @@ public class Main {
 		List<Departure> listeDepPaulSab = new ArrayList<Departure>();
 		listeDepPaulSab.addAll(pjalPaulSab.parse());
 		
-		System.out.println(listeDepPaulSab);
+		for (int i=0; i<listeDepPaulSab.size(); i++)
+		{
+			System.out.println(listeDepPaulSab.get(i).toString());
+		}
+		
+		/*
+		 * Récupération de la liste des lignes qui passent par l'arret Paul Sabatier
+		 */
+		
+		String requeteBusFacPharma = new String(
+				"http://pt.data.tisseo.fr/departureBoard?format=json&stopPointId="
+						+placeFacPharma.getId()+"&key=a03561f2fd10641d96fb8188d209414d8");
+		
+		LaunchRequest requestListAreasFacPharma = new LaunchRequest(requeteBusFacPharma);
+		String resultAreasFacPharma = requestListAreasFacPharma.get();
+		
+		ParserJsonAreasList pjalFacPharma = new ParserJsonAreasList(resultAreasFacPharma);
+		List<Departure> listeDepFacPharma = new ArrayList<Departure>();
+		listeDepFacPharma.addAll(pjalFacPharma.parse());
+		
+		for (int i=0; i<listeDepFacPharma.size(); i++)
+		{
+			System.out.println(listeDepFacPharma.get(i).toString());
+		}
 	}
 }

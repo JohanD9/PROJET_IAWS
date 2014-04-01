@@ -48,7 +48,6 @@ public class Line
 	
 	public String toString()
 	{
-		return ("line :\n\t\tname : "+name+"\n\t\tshortName : "+shortName
-				+"\n\t\tnetwork : "+network+"\n\t\tcolor : "+color);
+		return ("line :\n\t\tname : "+name+"\n\t\tshortName : "+shortName+"\n");
 	}
 }

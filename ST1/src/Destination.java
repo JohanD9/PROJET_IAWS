@@ -26,6 +26,6 @@ public class Destination
 	
 	public String toString()
 	{
-		return ("destination :\n\t\tname : "+name+"\n\t\tcityName : "+cityName);
+		return ("destination :\n\t\tname : "+name+"\n\t\tcityName : "+cityName+"\n");
 	}
 }

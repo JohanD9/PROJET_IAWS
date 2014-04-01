@@ -52,8 +52,8 @@ public class Departure
 	
 	public String toString()
 	{
-		return ("dateTime : "+dateTime+"\nrealTime : "+realTime+"\n"
-				+this.line.toString()+"\n"+this.destination.toString());
+		return ("dateTime : "+dateTime+"\n"+this.line.toString()
+				+"\n"+this.destination.toString()+"\n");
 	}
 	
 }
