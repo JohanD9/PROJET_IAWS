@@ -10,11 +10,9 @@ import parserJson.ParserJsonStation;
 import HTTPrequest.LaunchGetHTTP;
 
 public class GestionVelo {
-	private int station;
 	private ArrayList<Station> listStations;
 
-	public GestionVelo(int station) throws IOException, JSONException {
-		this.station = station;
+	public GestionVelo() throws IOException, JSONException {
 		listStations = new ArrayList<Station>();
 		init();
 	}
@@ -47,8 +45,8 @@ public class GestionVelo {
 		listStations.add(FacPharma);	//INDEX 1
 	}
 	
-	public int getNbVelosDispo() {
-		switch (station) {
+	public int getNbVelosDispo(Station courante) {
+		switch (courante.getNumber()) {
 			case 227:
 				return listStations.get(0).getAvailable_bikes();
 		
@@ -57,6 +55,23 @@ public class GestionVelo {
 		}
 		return -1;
 	}
+	
+	public int getNbPlacesDispo(Station courante) {
+		switch (courante.getNumber()) {
+			case 227:
+				return listStations.get(0).getAvailable_bike_stands();
+		
+			case 228:
+				return listStations.get(0).getAvailable_bike_stands();
+		}
+		return -1;
+	}
+
+	public ArrayList<Station> getListStations() {
+		return listStations;
+	}
+	
+	
 	
 	
 

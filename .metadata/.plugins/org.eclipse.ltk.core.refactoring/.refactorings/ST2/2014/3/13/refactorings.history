@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;parserJson.ParserJsonAreasList&apos; to &apos;ParserJsonLine&apos;&#x0A;- Original project: &apos;ST2&apos;&#x0A;- Original element: &apos;parserJson.ParserJsonAreasList&apos;&#x0A;- Renamed element: &apos;parserJson.ParserJsonLine&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;ParserJsonAreasList&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;parserJson{ParserJsonAreasList.java[ParserJsonAreasList" matchStrategy="1" name="ParserJsonLine" qualified="false" references="true" similarDeclarations="false" stamp="1396196534819" textual="false" version="1.0"/>
+</session>

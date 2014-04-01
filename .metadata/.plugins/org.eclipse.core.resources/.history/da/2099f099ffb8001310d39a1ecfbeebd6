@@ -1,0 +1,25 @@
+package gestionST4;
+
+import java.io.IOException;
+
+import org.json.JSONException;
+
+import parserJson.ParserJsonStation;
+import HTTPrequest.LaunchGetHTTP;
+
+public class main {
+
+	public static void main(String[] args) throws NumberFormatException, IOException, JSONException {
+		GestionVelo monGestionnaire = new GestionVelo();
+		String html = "";
+		
+		for(Station courante: monGestionnaire.getListStations()){
+			html += "<div class=\"station\">\n"
+					+ "<h3>Station " + courante.getName() + " :  </h3>\n"
+					+ "<p class=\"adresse\">" + courante.getAddress() + "</p>\n"
+							+ "<span>Il y a " + courante.getAvailable_bikes() + " vélos disponibles | " + courante.getAvailable_bike_stands() + " places libres</span>\n"
+									+ "<br>\n";
+		}
+		
+	}
+}
