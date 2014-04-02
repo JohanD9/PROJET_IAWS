@@ -1,0 +1,40 @@
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.json.JSONException;
+
+
+public class GestionPlace {
+	private Place place;
+	private ArrayList<Departure> listDeparture;
+	
+	public GestionPlace(Place place) {
+		super();
+		this.place = place;
+		this.listDeparture = new ArrayList<Departure>();
+		recupererLignes();
+	}
+	
+	public void recupererLignes() throws IOException, JSONException {
+		String requeteBusPaulSab = new String(
+				"http://pt.data.tisseo.fr/departureBoard?format=json&stopPointId="
+						+place.getId()+"&key=a03561f2fd10641d96fb8188d209414d8");
+		
+		LaunchRequest requestListAreasPaulSab = new LaunchRequest(requeteBusPaulSab);
+		String resultAreasPaulSab = requestListAreasPaulSab.get();
+		
+		ParserJsonAreasList pjalPaulSab = new ParserJsonAreasList(resultAreasPaulSab);
+		listDeparture.addAll(pjalPaulSab.parse());
+	}
+
+	public Place getPlace() {
+		return place;
+	}
+
+	public ArrayList<Departure> getListDeparture() {
+		return listDeparture;
+	}
+	
+	
+}

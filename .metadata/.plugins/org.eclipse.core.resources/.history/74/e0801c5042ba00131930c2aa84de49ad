@@ -1,0 +1,118 @@
+import java.io.IOException;
+import java.io.ObjectInputStream.GetField;
+import java.text.ParseException;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.json.JSONException;
+
+public class Main {
+	public static void main(String[] args) throws IOException, JSONException, ParseException {
+		/*
+		 * R�cup�ration de la place Paul Sabatier
+		 */
+		LaunchRequest requestPaulSab = new LaunchRequest(
+				"http://pt.data.tisseo.fr/placesList?format=json&term=paul%20sabatier&displayOnlyStopAreas=1"
+						+ "&number=1&key=a03561f2fd10641d96fb8188d209414d8");
+		String resPaulSab = requestPaulSab.get();
+
+		ParserJsonStop pjPaulSab = new ParserJsonStop(resPaulSab);
+		Place placePaulSab = pjPaulSab.parse();
+
+		/*
+		 * R�cup�ration de la place Facult� de pharmacie
+		 */
+
+		LaunchRequest requestFacPharma = new LaunchRequest(
+				"http://pt.data.tisseo.fr/placesList?format=json&term=faculte%20de%20pharmacie&displayOnlyStopAreas=1"
+						+ "&number=1&key=a03561f2fd10641d96fb8188d209414d8");
+		String resFacPharma = requestFacPharma.get();
+
+		ParserJsonStop pjFacPharma = new ParserJsonStop(resFacPharma);
+		Place placeFacPharma = pjFacPharma.parse();
+		
+		/*
+		 * R�cup�ration de la liste des lignes qui passent par l'arret Paul Sabatier
+		 */
+		
+		/*String requeteBusPaulSab = new String(
+				"http://pt.data.tisseo.fr/departureBoard?format=json&stopPointId="
+						+placePaulSab.getId()+"&key=a03561f2fd10641d96fb8188d209414d8");
+		
+		LaunchRequest requestListAreasPaulSab = new LaunchRequest(requeteBusPaulSab);
+		String resultAreasPaulSab = requestListAreasPaulSab.get();
+		
+		ParserJsonAreasList pjalPaulSab = new ParserJsonAreasList(resultAreasPaulSab);
+		List<Departure> listeDepPaulSab = new ArrayList<Departure>();
+		listeDepPaulSab.addAll(pjalPaulSab.parse());
+		*/
+		
+		
+		
+
+		
+		/*
+		 * R�cup�ration de la liste des lignes qui passent par l'arret Paul Sabatier
+		 */
+		
+		/*String requeteBusFacPharma = new String(
+				"http://pt.data.tisseo.fr/departureBoard?format=json&stopPointId="
+						+placeFacPharma.getId()+"&key=a03561f2fd10641d96fb8188d209414d8");
+		
+		LaunchRequest requestListAreasFacPharma = new LaunchRequest(requeteBusFacPharma);
+		String resultAreasFacPharma = requestListAreasFacPharma.get();
+		
+		ParserJsonAreasList pjalFacPharma = new ParserJsonAreasList(resultAreasFacPharma);
+		List<Departure> listeDepFacPharma = new ArrayList<Departure>();
+		listeDepFacPharma.addAll(pjalFacPharma.parse());
+		
+		for (int i=0; i<listeDepFacPharma.size(); i++)
+		{
+			System.out.println(listeDepFacPharma.get(i).toString());
+		}*/
+		
+		String ps = "paulSab";
+		String fp = "facPharma";
+		
+		GestionPlace gestionPaulSab = new GestionPlace(placePaulSab);
+		gestionPaulSab.parseShortname();
+		
+		String html = "<div id=\"paulSab\">\n";
+		String shortname = "";
+		
+		while ((shortname = gestionPaulSab.getNextShortName()) != null) {
+			html += "<table class=\"maTable\">\n"
+					+ "<tr>\n"
+					+ "<td class=\"numBus\" style=\"background-color: " + gestionPaulSab.getListDepartureNum(shortname).get(0).getLine().getColor() + ";\">"
+					+ shortname + "</td>\n"
+							+ "<td class=\"infoBus\">" + gestionPaulSab.getListDepartureNum(shortname).get(0).getLine().getName() + "<img id=\"img" + shortname
+							+ " class=\"clic\" style=\"float: right;\" src=\"pictures/plus.png\""
+							+ "alt=\"Velo disponible\" height=\"30\" width=\"30\""
+							+ "onclick=\"show_panel('ligne"+ shortname + "', 'img"+ shortname + "');\"></td>\n"
+									+ "</tr>\n"
+							+"<div style=\"display: none;\" id=\"ligne88\" class=\"infosDepart\">";
+			for (Departure dep: gestionPaulSab.getListDepartureNum(shortname)) {
+				dep.getDateFormat();
+			}
+		}
+		html += "</div>\n";
+		
+		System.out.println(html);
+		
+		
+		/*while (gestionPaulSab.getNextShortName() != null) {
+			String shortname = gestionPaulSab.getNextShortName();
+			
+			html += "<div id=\"paulSab\">\n"
+					+ "<table class=\"maTable\">\n"
+					+ "<tr>\n"
+					+ "<td class=\"numBus\" style=\"background-color: " + rgb(178, 145, 255);">;
+					
+		}*/
+		
+				
+		
+		
+		
+	}
+}

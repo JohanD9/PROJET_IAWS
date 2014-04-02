@@ -1,0 +1,70 @@
+import java.sql.Date;
+import java.text.SimpleDateFormat;
+
+
+public class Departure
+{
+	private String dateTime;
+	private String realTime;
+	private Line line;
+	private Destination destination;
+	
+	public Departure ()
+	{
+		this.dateTime = null;
+		this.realTime = null;
+		this.line = new Line();
+		this.destination = new Destination();
+	}
+	
+	public String getDateTime() {
+		return dateTime;
+	}
+
+	public void setDateTime(String dateTime) {
+		this.dateTime = dateTime;
+	}
+
+	public String getRealTime() {
+		return realTime;
+	}
+
+	public void setRealTime(String realTime) {
+		this.realTime = realTime;
+	}
+
+	public Line getLine()
+	{
+		return line;
+	}
+	
+	public void setLine(Line line)
+	{
+		this.line = line;
+	}
+	
+	public Destination getDestination()
+	{
+		return destination;
+	}
+	
+	public void setDestination(Destination destination)
+	{
+		this.destination = destination;
+	}
+	
+	public String toString()
+	{
+		return ("dateTime : "+dateTime+"\n"+this.line.toString()
+				+"\n"+this.destination.toString()+"\n");
+	}
+	
+	public Date getDateFormat() {
+					
+		Date date = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse("2012-05-20T09:00:00.000Z");
+		String formattedDate = new SimpleDateFormat("dd/MM/yyyy, Ka").format(date));
+		
+		return res;
+	}
+	
+}
