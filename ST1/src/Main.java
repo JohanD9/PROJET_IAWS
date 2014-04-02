@@ -5,68 +5,65 @@ import java.util.List;
 import org.json.JSONException;
 
 public class Main {
-	public static void main(String[] args) throws IOException, JSONException {
-		/*
-		 * Récupération de la place Paul Sabatier
-		 */
-		LaunchRequest requestPaulSab = new LaunchRequest(
-				"http://pt.data.tisseo.fr/placesList?format=json&term=paul%20sabatier&displayOnlyStopAreas=1"
-						+ "&number=1&key=a03561f2fd10641d96fb8188d209414d8");
-		String resPaulSab = requestPaulSab.get();
-
-		ParserJsonStop pjPaulSab = new ParserJsonStop(resPaulSab);
-		Place placePaulSab = pjPaulSab.parse();
-
-		/*
-		 * Récupération de la place Faculté de pharmacie
-		 */
-
-		LaunchRequest requestFacPharma = new LaunchRequest(
-				"http://pt.data.tisseo.fr/placesList?format=json&term=faculte%20de%20pharmacie&displayOnlyStopAreas=1"
-						+ "&number=1&key=a03561f2fd10641d96fb8188d209414d8");
-		String resFacPharma = requestFacPharma.get();
-
-		ParserJsonStop pjFacPharma = new ParserJsonStop(resFacPharma);
-		Place placeFacPharma = pjFacPharma.parse();
+	public static void main(String[] args) throws IOException, JSONException
+	{
+		String arret = new String("");
 		
-		/*
-		 * Récupération de la liste des lignes qui passent par l'arret Paul Sabatier
-		 */
-		
-		String requeteBusPaulSab = new String(
-				"http://pt.data.tisseo.fr/departureBoard?format=json&stopPointId="
-						+placePaulSab.getId()+"&key=a03561f2fd10641d96fb8188d209414d8");
-		
-		LaunchRequest requestListAreasPaulSab = new LaunchRequest(requeteBusPaulSab);
-		String resultAreasPaulSab = requestListAreasPaulSab.get();
-		
-		ParserJsonAreasList pjalPaulSab = new ParserJsonAreasList(resultAreasPaulSab);
-		List<Departure> listeDepPaulSab = new ArrayList<Departure>();
-		listeDepPaulSab.addAll(pjalPaulSab.parse());
-		
-		for (int i=0; i<listeDepPaulSab.size(); i++)
+		if (args.length != 1)
 		{
-			System.out.println(listeDepPaulSab.get(i).toString());
+			System.out.println("Erreur : nombre de paramètres incorrect");
 		}
-		
-		/*
-		 * Récupération de la liste des lignes qui passent par l'arret Paul Sabatier
-		 */
-		
-		String requeteBusFacPharma = new String(
-				"http://pt.data.tisseo.fr/departureBoard?format=json&stopPointId="
-						+placeFacPharma.getId()+"&key=a03561f2fd10641d96fb8188d209414d8");
-		
-		LaunchRequest requestListAreasFacPharma = new LaunchRequest(requeteBusFacPharma);
-		String resultAreasFacPharma = requestListAreasFacPharma.get();
-		
-		ParserJsonAreasList pjalFacPharma = new ParserJsonAreasList(resultAreasFacPharma);
-		List<Departure> listeDepFacPharma = new ArrayList<Departure>();
-		listeDepFacPharma.addAll(pjalFacPharma.parse());
-		
-		for (int i=0; i<listeDepFacPharma.size(); i++)
+		else
 		{
-			System.out.println(listeDepFacPharma.get(i).toString());
+			if (args[0].equals("paul%20sabatier"))
+			{
+				arret += "Université Paul Sabatier";
+			}
+			else
+			{
+				arret += "Faculté de Pharmacie";
+			}
+			
+			System.out.println(arret);
+			
+			/*
+			 * Récupération de la place
+			 */
+			
+			LaunchRequest request = new LaunchRequest(
+					"http://pt.data.tisseo.fr/placesList?format=json&term="+args[0]+"&displayOnlyStopAreas=1"
+							+ "&number=1&key=a03561f2fd10641d96fb8188d209414d8");
+			
+			String res = request.get();
+			
+			ParserJsonStop parsJson = new ParserJsonStop(res);
+			Place place = parsJson.parse();
+			
+			/*
+			 * Récupération de la liste des lignes qui passent par l'arret
+			 */
+			
+			String requeteBus = new String(
+			"http://pt.data.tisseo.fr/departureBoard?format=json&stopPointId="
+					+place.getId()+"&key=a03561f2fd10641d96fb8188d209414d8");
+
+			LaunchRequest requestListAreas = new LaunchRequest(requeteBus);
+			String resultAreas = requestListAreas.get();
+			
+			
+			ParserJsonAreasList parsJsonAreasList = new ParserJsonAreasList(resultAreas);
+			List<Departure> listeDep = new ArrayList<Departure>();
+			listeDep.addAll(parsJsonAreasList.parse());
+			
+			System.out.println(listeDep.size());
+			
+			for (int i=0; i<listeDep.size(); i++)
+			{
+				if (!listeDep.get(i).getDestination().getName().equals(arret))
+				{
+					System.out.println(listeDep.get(i).getDestination().getName());
+				}
+			}
 		}
 	}
 }
