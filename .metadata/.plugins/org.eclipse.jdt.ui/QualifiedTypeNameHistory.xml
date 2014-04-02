@@ -9,9 +9,18 @@
 <fullyQualifiedTypeName name="gestionST4.Position"/>
 <fullyQualifiedTypeName name="java.awt.List"/>
 <fullyQualifiedTypeName name="gestionST4.Station"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="gestionST2.Line"/>
 <fullyQualifiedTypeName name="gestionST2.Destination"/>
 <fullyQualifiedTypeName name="gestionST4.GestionVelo"/>
+<fullyQualifiedTypeName name="Place"/>
+<fullyQualifiedTypeName name="java.util.Collections"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="java.io.ObjectInputStream.GetField"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="Departure"/>
+<fullyQualifiedTypeName name="java.sql.Date"/>
+<fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+<fullyQualifiedTypeName name="java.util.Set"/>
+<fullyQualifiedTypeName name="java.util.EnumSet"/>
+<fullyQualifiedTypeName name="GestionPlace"/>
 </qualifiedTypeNameHistroy>

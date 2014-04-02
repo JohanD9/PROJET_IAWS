@@ -1,3 +1,7 @@
+import java.sql.Date;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+
 
 public class Departure
 {
@@ -55,5 +59,4 @@ public class Departure
 		return ("dateTime : "+dateTime+"\n"+this.line.toString()
 				+"\n"+this.destination.toString()+"\n");
 	}
-	
 }

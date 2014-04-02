@@ -13,13 +13,16 @@
 		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="line" key="selection"/>
+		<item value="FacPharma" key="selection"/>
 		<list key="findhistory">
+			<item value="PaulSab"/>
+			<item value="System"/>
 			<item value="dep"/>
 			<item value="long"/>
 			<item value="int"/>
 		</list>
 		<list key="replacehistory">
+			<item value="FacPharma"/>
 			<item value="line"/>
 			<item value="double"/>
 			<item value="float"/>
