@@ -11,6 +11,23 @@ http://pt.data.tisseo.fr/placesList?format=json&term=faculte%20de%20pharmacie&di
 // récupérer l'id des bus qui passent par la zone d'arret faculté de pharmacie
 http://pt.data.tisseo.fr/departureBoard?format=json&stopPointId=1970324837185357&key=a03561f2fd10641d96fb8188d209414d8
 
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+// récupérer l'id de la zone d'arret Paul sabatier
+http://pt.data.tisseo.fr/placesList?format=json&term=paul%20sabatier&displayOnlyStopAreas=1&number=1&key=a03561f2fd10641d96fb8188d209414d8
+
+// --> 1970324837185012
+
+//recuperer la liste des poteaux d'arrets (operatorCode) de la zone (avec id zone)
+http://pt.data.tisseo.fr/stopPointsList?stopAreaId=1970324837185012&number=10&format=json&key=a03561f2fd10641d96fb8188d209414d8
+
+// --> 5810, ...
+
+// Pour chaque poteaux d'arret recuperer les deux prochains bus pour chaque poteaux d'arret (avec operator code)
+http://pt.data.tisseo.fr/departureBoard?operatorCode=5810&number=2&format=json&key=a03561f2fd10641d96fb8188d209414d8
+
 ================================================================= ST2 =================================================================
 
 
