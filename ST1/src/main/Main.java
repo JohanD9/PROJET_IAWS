@@ -30,9 +30,6 @@ public class Main {
 
 		ParserJsonStop pjPaulSab = new ParserJsonStop(resPaulSab);
 		Place placePaulSab = pjPaulSab.parse();
-		
-		ParserPaulSab p = new ParserPaulSab();
-		p.parse();
 
 		/*
 		 * R�cup�ration de la place Facult� de pharmacie
