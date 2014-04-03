@@ -23,4 +23,5 @@
 <fullyQualifiedTypeName name="java.util.Set"/>
 <fullyQualifiedTypeName name="java.util.EnumSet"/>
 <fullyQualifiedTypeName name="GestionPlace"/>
+<fullyQualifiedTypeName name="java.io.PrintStream"/>
 </qualifiedTypeNameHistroy>
