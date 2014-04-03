@@ -1,0 +1,110 @@
+package jsonObject;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
+import lienHttp.LaunchRequest;
+
+import org.json.JSONException;
+
+import parsers.ParserJsonAreasList;
+
+
+public class GestionPlace {
+	private ArrayList<Departure> listDeparture;
+	private ArrayList<String> listShortName;
+	
+	public GestionPlace(ArrayList<Departure> list) throws IOException, JSONException {
+		super();
+		this.listDeparture = new ArrayList<Departure>();
+		this.listShortName = new ArrayList<String>();
+	}
+	
+	/*public void recupererLignes() throws IOException, JSONException {
+		String requeteBusPaulSab = new String(
+				"http://pt.data.tisseo.fr/departureBoard?format=json&stopPointId="
+						+place.getId()+"&key=a03561f2fd10641d96fb8188d209414d8");
+		
+		LaunchRequest requestListAreasPaulSab = new LaunchRequest(requeteBusPaulSab);
+		String resultAreasPaulSab = requestListAreasPaulSab.get();
+		ParserJsonAreasList pjalPaulSab = new ParserJsonAreasList(resultAreasPaulSab);
+		listDeparture.addAll(pjalPaulSab.parse());
+	}*/
+
+	public Place getPlace() {
+		return place;
+	}
+
+	public ArrayList<Departure> getListDeparture() {
+		return listDeparture;
+	}
+	
+	public ArrayList<Departure> getListDepartureNum(String id) {
+		ArrayList<Departure> list = new ArrayList<Departure>();
+		
+		for(Departure courant: listDeparture) {
+			if (courant.getLine().getShortName().equals(id)) {
+				list.add(courant);
+			}
+		}
+		
+		return list;
+	}
+	
+	public void parseShortname() {
+		ArrayList<Integer> listShortnameInt = new ArrayList<Integer>();
+		
+		for(Departure courant: listDeparture) {
+			try {
+				Integer tmp = Integer.parseInt(courant.getLine().getShortName());
+				if (!listShortnameInt.contains(tmp)) {
+					listShortnameInt.add(tmp);
+				}
+			} catch (Exception e) {
+				if (!listShortName.contains(courant.getLine().getShortName())) {
+					listShortName.add(courant.getLine().getShortName());
+				}
+			}
+		}
+		Collections.sort(listShortnameInt);
+		for (Integer x: listShortnameInt) {
+			listShortName.add(String.valueOf(x));
+		}
+	}
+	
+	public String getNextShortName() {
+		if (listShortName.isEmpty()) {
+			return null;
+		} else {
+			String res = listShortName.get(0);
+			listShortName.remove(0);
+			return res;
+		}
+		
+	}
+	
+	public ArrayList<String> getListDestination (String id) {
+		ArrayList<String> listDest = new ArrayList<String>();
+		
+		for(Departure courant: getListDepartureNum(id)) {
+			String tmp = courant.getDestination().getName();
+			if (!listDest.contains(tmp)) {
+				listDest.add(tmp);
+			}
+		}
+		return listDest;
+	}
+	
+	public String getNextDestination (String id) {
+		if (this.getListDestination(id).isEmpty()) {
+			return null;
+		} else {
+			String res = this.getListDestination(id).get(0);
+			this.getListDestination(id).remove(0);
+			return res;
+		}
+	}
+	
+	
+	
+	
+}

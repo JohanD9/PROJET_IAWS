@@ -1,0 +1,265 @@
+package main;
+
+import java.io.IOException;
+import java.io.PrintStream;
+import java.text.ParseException;
+
+import jsonObject.Departure;
+import jsonObject.GestionPlace;
+
+import org.json.JSONException;
+
+import parsers.ParserFacDentaire;
+import parsers.ParserFacPharma;
+import parsers.ParserPaulSab;
+
+public class Main {
+
+	public static void main(String[] args) throws IOException, JSONException,
+			ParseException {
+
+		Boolean hr = false;
+		int nbLike = 1050;
+		int nbUnlike = 103;
+		String shortname = "";
+		String ps = "paulSab";
+		String fp = "facPharma";
+		String fd = "facDent";
+		String displayDiv = "block";
+
+		// Parser
+		ParserFacPharma pFacPharma = new ParserFacPharma();
+		ParserPaulSab pPaulSab = new ParserPaulSab();
+		ParserFacDentaire pFacDentaire = new ParserFacDentaire();
+
+		// Gestionnaire place PAUL SAB
+		GestionPlace gestionPaulSab = new GestionPlace(pPaulSab.parse());
+		gestionPaulSab.parseShortname();
+
+		String html = "<div id=\"" + ps + "\" style = \"display:" + displayDiv
+				+ ";\">\n";
+
+		while ((shortname = gestionPaulSab.getNextShortName()) != null) {
+			if (hr) {
+				html += "<br>\n";
+			}
+			hr = true;
+			html += "<table class=\"maTable\">\n" + "<tr>\n"
+					+ "<td class=\"numBus\" style=\"background-color: rgb"
+					+ gestionPaulSab.getListDepartureNum(shortname).get(0)
+							.getLine().getColor()
+					+ ";\">"
+					+ shortname
+					+ "</td>\n"
+					+ "<td class=\"infoBus\">"
+					+ gestionPaulSab.getListDepartureNum(shortname).get(0)
+							.getLine().getName()
+					+ "<div class=icone style=\"float: right;\">\n"
+					+ "<img id=like"
+					+ shortname
+					+ ps
+					+ " class=\"clic\" src=\"pictures/like.png\" "
+					+ "alt=\"Like\" height=\"30\" width=\"30\" onclick=\"like('"
+					+ shortname
+					+ "');\">\n<span>"
+					+ nbLike
+					+ "</span>"
+					+ "<img id=unlike"
+					+ shortname
+					+ ps
+					+ " class=\"clic\" src=\"pictures/unlike.png\" "
+					+ "alt=\"Unlike\" height=\"30\" width=\"30\" onclick=\"unlike('"
+					+ shortname
+					+ "');\">\n<span>"
+					+ nbUnlike
+					+ "</span>"
+					+ "<img id=img"
+					+ shortname
+					+ ps
+					+ " class=\"clic\" style=\"float: right;\" src=\"pictures/plus.png\""
+					+ "alt=\"Velo disponible\" height=\"30\" width=\"30\""
+					+ "onclick=\"show_panel('ligne"
+					+ shortname
+					+ ps
+					+ "', 'img"
+					+ shortname
+					+ ps
+					+ "');\">\n</div>\n</td>\n"
+					+ "</tr>\n</table>\n"
+					+ "<div style=\"display: none;\" id=\"ligne"
+					+ shortname
+					+ ps + "\" class=\"infosDepart\">";
+			for (String dest : gestionPaulSab.getListDestination(shortname)) {
+				html += "<div class=\"infosDepartLigne\">\n"
+						+ "<p class=\"direction\">" + dest + " :</p>\n"
+						+ "<div class=\"dateDepart\">\n";
+				for (Departure dep : gestionPaulSab
+						.getListDepartureNum(shortname)) {
+					if (dep.getDestination().getName().equals(dest)) {
+						html += "<span>" + dep.getDateTime() + "</span><br>\n";
+					}
+				}
+				html += "</div>\n</div>\n";
+			}
+			html += "</div>\n";
+
+		}
+		html += "</div>\n";
+
+		// Gestionnaire place FAC PHARMA
+		hr = true;
+		displayDiv = "none";
+		GestionPlace gestionFacPharma = new GestionPlace(pFacPharma.parse());
+		gestionFacPharma.parseShortname();
+
+		html += "<div id=\"" + fp + "\" style = \"display:" + displayDiv
+				+ ";\">\n";
+		shortname = "";
+
+		while ((shortname = gestionFacPharma.getNextShortName()) != null) {
+			if (hr) {
+				html += "<br>\n";
+			}
+			hr = true;
+			html += "<table class=\"maTable\">\n" + "<tr>\n"
+					+ "<td class=\"numBus\" style=\"background-color: rgb"
+					+ gestionFacPharma.getListDepartureNum(shortname).get(0)
+							.getLine().getColor()
+					+ ";\">"
+					+ shortname
+					+ "</td>\n"
+					+ "<td class=\"infoBus\">"
+					+ gestionFacPharma.getListDepartureNum(shortname).get(0)
+							.getLine().getName()
+					+ "<div class=icone style=\"float: right;\">\n"
+					+ "<img id=like"
+					+ shortname
+					+ fp
+					+ " class=\"clic\" src=\"pictures/like.png\" "
+					+ "alt=\"Like\" height=\"30\" width=\"30\" onclick=\"like('"
+					+ shortname
+					+ "');\">\n<span>"
+					+ nbLike
+					+ "</span>"
+					+ "<img id=unlike"
+					+ shortname
+					+ fp
+					+ " class=\"clic\" src=\"pictures/unlike.png\" "
+					+ "alt=\"Unlike\" height=\"30\" width=\"30\" onclick=\"unlike('"
+					+ shortname
+					+ "');\">\n<span>"
+					+ nbUnlike
+					+ "</span>"
+					+ "<img id=img"
+					+ shortname
+					+ fp
+					+ " class=\"clic\" style=\"float: right;\" src=\"pictures/plus.png\""
+					+ "alt=\"Velo disponible\" height=\"30\" width=\"30\""
+					+ "onclick=\"show_panel('ligne"
+					+ shortname
+					+ fp
+					+ "', 'img"
+					+ shortname
+					+ fp
+					+ "');\">\n</div>\n</td>\n"
+					+ "</tr>\n</table>\n"
+					+ "<div style=\"display: none;\" id=\"ligne"
+					+ shortname
+					+ fp + "\" class=\"infosDepart\">";
+			for (String dest : gestionFacPharma.getListDestination(shortname)) {
+				html += "<div class=\"infosDepartLigne\">\n"
+						+ "<p class=\"direction\">" + dest + " :</p>\n"
+						+ "<div class=\"dateDepart\">\n";
+				for (Departure dep : gestionFacPharma
+						.getListDepartureNum(shortname)) {
+					if (dep.getDestination().getName().equals(dest)) {
+						html += "<span>" + dep.getDateTime() + "</span><br>\n";
+					}
+				}
+				html += "</div>\n</div>\n";
+			}
+			html += "</div>\n";
+		}
+		html += "</div>\n";
+
+		// Gestionnaire place FAC DENTAIRE
+		hr = true;
+		displayDiv = "none";
+		GestionPlace gestionFacDent = new GestionPlace(pFacPharma.parse());
+		gestionFacDent.parseShortname();
+
+		html += "<div id=\"" + fd + "\" style = \"display:" + displayDiv
+				+ ";\">\n";
+		shortname = "";
+
+		while ((shortname = gestionFacDent.getNextShortName()) != null) {
+			if (hr) {
+				html += "<br>\n";
+			}
+			hr = true;
+			html += "<table class=\"maTable\">\n" + "<tr>\n"
+					+ "<td class=\"numBus\" style=\"background-color: rgb"
+					+ gestionFacDent.getListDepartureNum(shortname).get(0)
+							.getLine().getColor()
+					+ ";\">"
+					+ shortname
+					+ "</td>\n"
+					+ "<td class=\"infoBus\">"
+					+ gestionFacDent.getListDepartureNum(shortname).get(0)
+							.getLine().getName()
+					+ "<div class=icone style=\"float: right;\">\n"
+					+ "<img id=like"
+					+ shortname
+					+ fd
+					+ " class=\"clic\" src=\"pictures/like.png\" "
+					+ "alt=\"Like\" height=\"30\" width=\"30\" onclick=\"like('"
+					+ shortname
+					+ "');\">\n<span>"
+					+ nbLike
+					+ "</span>"
+					+ "<img id=unlike"
+					+ shortname
+					+ fd
+					+ " class=\"clic\" src=\"pictures/unlike.png\" "
+					+ "alt=\"Unlike\" height=\"30\" width=\"30\" onclick=\"unlike('"
+					+ shortname
+					+ "');\">\n<span>"
+					+ nbUnlike
+					+ "</span>"
+					+ "<img id=img"
+					+ shortname
+					+ fd
+					+ " class=\"clic\" style=\"float: right;\" src=\"pictures/plus.png\""
+					+ "alt=\"Velo disponible\" height=\"30\" width=\"30\""
+					+ "onclick=\"show_panel('ligne"
+					+ shortname
+					+ fd
+					+ "', 'img"
+					+ shortname
+					+ fd
+					+ "');\">\n</div>\n</td>\n"
+					+ "</tr>\n</table>\n"
+					+ "<div style=\"display: none;\" id=\"ligne"
+					+ shortname
+					+ fd + "\" class=\"infosDepart\">";
+			for (String dest : gestionFacDent.getListDestination(shortname)) {
+				html += "<div class=\"infosDepartLigne\">\n"
+						+ "<p class=\"direction\">" + dest + " :</p>\n"
+						+ "<div class=\"dateDepart\">\n";
+				for (Departure dep : gestionFacDent
+						.getListDepartureNum(shortname)) {
+					if (dep.getDestination().getName().equals(dest)) {
+						html += "<span>" + dep.getDateTime() + "</span><br>\n";
+					}
+				}
+				html += "</div>\n</div>\n";
+			}
+			html += "</div>\n";
+		}
+		html += "</div>\n";
+
+		// Sortie HTML format utf-8
+		PrintStream pstream = new PrintStream(System.out, true, "UTF-8");
+		pstream.println(html);
+	}
+}

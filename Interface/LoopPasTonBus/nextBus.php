@@ -35,7 +35,7 @@
 							<ul class="dropdown-menu">
 								<li class="nav-header">Tisséo</li>
 								<li><a href="/LoopPasTonBus/nextBus.php">Mon prochain bus</a></li>
-								<li><a href="#">Mon prochain métro</a></li>
+								<li><a href="/LoopPasTonBus/nextMetro.php">Mon prochain métro</a></li>
 								<li class="divider"></li>
 								<li class="nav-header">VélôToulouse</li>
 								<li><a href="/LoopPasTonBus/velos.php">Les vélos dispos/libres</a></li>

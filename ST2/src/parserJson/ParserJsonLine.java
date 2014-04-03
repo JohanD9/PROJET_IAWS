@@ -1,5 +1,4 @@
 package parserJson;
-import gestionST2.Destination;
 import gestionST2.Line;
 
 import java.util.ArrayList;
@@ -23,11 +22,8 @@ public class ParserJsonLine
 	{
 		int i;
 		List<Line> listeLine = new ArrayList<Line>();
-		Line line;
 		JSONObject innerJsonObjectDeparture;
 		JSONObject innerJsonObjectLine;
-		JSONArray innerJsonArrayDestination;
-		
 		JSONObject jsonObject = new JSONObject(json);
 		JSONObject innerJsonObject = jsonObject.getJSONObject("departures");
 		JSONArray jsonArray = innerJsonObject.getJSONArray("departure");
@@ -46,7 +42,6 @@ public class ParserJsonLine
 			
 			listeLine.add(line1);
 			
-			innerJsonArrayDestination = null;
 			innerJsonObjectDeparture = null;
 			line1 = null;
 		}

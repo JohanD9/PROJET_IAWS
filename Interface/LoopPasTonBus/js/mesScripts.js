@@ -73,8 +73,8 @@ function refreshBus() {
 function like(idImg) {
 	for(var i= 0; i < stationTab.length; i++)
 	{
-		var imgLike = document.getElementById("like"+idImg+stationTab[i])
-		var imgUnlike = document.getElementById("unlike"+idImg+stationTab[i])
+		var imgLike = document.getElementById("like"+idImg+stationTab[i]);
+		var imgUnlike = document.getElementById("unlike"+idImg+stationTab[i]);
 		imgLike.src="pictures/like_NB.png";
 		imgUnlike.src="pictures/unlike.png";
 			
@@ -84,10 +84,25 @@ function like(idImg) {
 function unlike(idImg) {
 	for(var i= 0; i < stationTab.length; i++)
 	{
-		var imgLike = document.getElementById("like"+idImg+stationTab[i])
-		var imgUnlike = document.getElementById("unlike"+idImg+stationTab[i])
+		var imgLike = document.getElementById("like"+idImg+stationTab[i]);
+		var imgUnlike = document.getElementById("unlike"+idImg+stationTab[i]);
 
 		imgLike.src="pictures/like.png";
 		imgUnlike.src="pictures/unlike_NB.png";
 	}	
+}
+
+function likeMetro(idImg) {
+		var imgLike = document.getElementById("like"+idImg);
+		var imgUnlike = document.getElementById("unlike"+idImg);
+		imgLike.src="pictures/like_NB.png";
+		imgUnlike.src="pictures/unlike.png";
+}
+
+
+function unlikeMetro(idImg) {
+		var imgLike = document.getElementById("like"+idImg);
+		var imgUnlike = document.getElementById("unlike"+idImg);
+		imgLike.src="pictures/like.png";
+		imgUnlike.src="pictures/unlike_NB.png";
 }

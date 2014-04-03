@@ -1478,3 +1478,6 @@ Binding(CTRL+D,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.eclipse.ui 4 4 2014-04-03 18:26:53.611
+!MESSAGE Plug-in 'org.grails.ide.eclipse.ui' contributed an invalid Menu Extension (Path: 'org.eclipse.ui.projectConfigure' is invalid): org.grails.ide.eclipse.ui.migrateGrailsProjectContainerActionDelegate

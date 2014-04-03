@@ -1,0 +1,70 @@
+package parsers;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import jsonObject.Departure;
+import jsonObject.Place;
+import lienHttp.LaunchRequest;
+
+import org.json.JSONException;
+
+public class ParserFacDentaire {
+	private String idZoneArret;
+	private List<String> listeCodeOperator;
+	private ArrayList<Departure> listeDeparture;
+	
+	public ParserFacDentaire ()
+	{
+		this.idZoneArret = new String();
+		this.listeCodeOperator = new ArrayList<String>();
+		this.listeDeparture = new ArrayList<Departure>();
+	}
+	
+	public ArrayList<Departure> parse() throws IOException, JSONException
+	{
+		// r�sup�re l'id de la zone d'arret paul sab
+		
+		LaunchRequest requestFacPharmaId = new LaunchRequest(
+				"http://pt.data.tisseo.fr/placesList?format=json&term=fac%20de%dentaire&displayOnlyStopAreas=1"
+						+ "&number=1&key=a03561f2fd10641d96fb8188d209414d8");
+		String resFacDentId = requestFacPharmaId.get();
+		
+		ParserJsonStop pjFacDentStop = new ParserJsonStop(resFacDentId);
+		Place placeFacDent = pjFacDentStop.parse();
+		
+		this.idZoneArret += placeFacDent.getId();
+		
+		//r�cup�re la liste des poteaux physiques
+		
+		LaunchRequest requestFacPharmaPoteaux = new LaunchRequest("http://pt.data.tisseo.fr/stopPointsList?stopAreaId="
+				+ this.idZoneArret + "&format=json&key=a03561f2fd10641d96fb8188d209414d8");
+		
+		String resFacDentPoteaux = requestFacPharmaPoteaux.get();
+		
+		ParserJsonPoteaux pjFacDentPoteaux = new ParserJsonPoteaux(resFacDentPoteaux);
+		listeCodeOperator.addAll(pjFacDentPoteaux.parse());
+		
+		//r�cup�re la liste des Departures
+		
+		String resFacDentBus;
+		ParserJsonAreasList pjalFacDentBus;
+		
+		for (String codeOperator : listeCodeOperator)
+		{
+			LaunchRequest requestFacDentBus = new LaunchRequest("http://pt.data.tisseo.fr/departureBoard?operatorCode="
+					+ codeOperator +"&number=2&format=json&key=a03561f2fd10641d96fb8188d209414d8");
+			
+			resFacDentBus = requestFacDentBus.get();
+			pjalFacDentBus = new ParserJsonAreasList(resFacDentBus);
+			
+			listeDeparture.addAll(pjalFacDentBus.parse());
+			
+			pjalFacDentBus = null;
+			resFacDentBus = null;
+		}
+		
+		return (listeDeparture);
+	}
+}

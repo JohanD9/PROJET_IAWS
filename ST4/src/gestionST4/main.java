@@ -4,9 +4,6 @@ import java.io.IOException;
 
 import org.json.JSONException;
 
-import parserJson.ParserJsonStation;
-import HTTPrequest.LaunchGetHTTP;
-
 public class main {
 
 	public static void main(String[] args) throws NumberFormatException, IOException, JSONException {

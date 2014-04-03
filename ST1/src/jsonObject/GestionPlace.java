@@ -2,27 +2,20 @@ package jsonObject;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
-import lienHttp.LaunchRequest;
-
 import org.json.JSONException;
-
-import parsers.ParserJsonAreasList;
 
 
 public class GestionPlace {
-	private Place place;
 	private ArrayList<Departure> listDeparture;
 	private ArrayList<String> listShortName;
 	
-	public GestionPlace(Place place) throws IOException, JSONException {
+	public GestionPlace(ArrayList<Departure> list) throws IOException, JSONException {
 		super();
-		this.place = place;
-		this.listDeparture = new ArrayList<Departure>();
+		this.listDeparture = list;
 		this.listShortName = new ArrayList<String>();
-		recupererLignes();
 	}
 	
-	public void recupererLignes() throws IOException, JSONException {
+	/*public void recupererLignes() throws IOException, JSONException {
 		String requeteBusPaulSab = new String(
 				"http://pt.data.tisseo.fr/departureBoard?format=json&stopPointId="
 						+place.getId()+"&key=a03561f2fd10641d96fb8188d209414d8");
@@ -31,11 +24,7 @@ public class GestionPlace {
 		String resultAreasPaulSab = requestListAreasPaulSab.get();
 		ParserJsonAreasList pjalPaulSab = new ParserJsonAreasList(resultAreasPaulSab);
 		listDeparture.addAll(pjalPaulSab.parse());
-	}
-
-	public Place getPlace() {
-		return place;
-	}
+	}*/
 
 	public ArrayList<Departure> getListDeparture() {
 		return listDeparture;

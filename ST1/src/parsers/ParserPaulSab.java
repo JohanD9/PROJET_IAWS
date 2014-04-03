@@ -14,7 +14,7 @@ public class ParserPaulSab
 {
 	private String idZoneArret;
 	private List<String> listeCodeOperator;
-	private List<Departure> listeDeparture;
+	private ArrayList<Departure> listeDeparture;
 	
 	public ParserPaulSab ()
 	{
@@ -23,9 +23,9 @@ public class ParserPaulSab
 		this.listeDeparture = new ArrayList<Departure>();
 	}
 	
-	public List<Departure> parse() throws IOException, JSONException
+	public ArrayList<Departure> parse() throws IOException, JSONException
 	{
-		// résupère l'id de la zone d'arret paul sab
+		// rï¿½supï¿½re l'id de la zone d'arret paul sab
 		
 		LaunchRequest requestPaulSabId = new LaunchRequest(
 				"http://pt.data.tisseo.fr/placesList?format=json&term=paul%20sabatier&displayOnlyStopAreas=1"
@@ -37,7 +37,7 @@ public class ParserPaulSab
 		
 		this.idZoneArret += placePaulSab.getId();
 		
-		//récupère la liste des poteaux physiques
+		//rï¿½cupï¿½re la liste des poteaux physiques
 		
 		LaunchRequest requestPaulSabPoteaux = new LaunchRequest("http://pt.data.tisseo.fr/stopPointsList?stopAreaId="
 				+ this.idZoneArret + "&number=10&format=json&key=a03561f2fd10641d96fb8188d209414d8");
@@ -47,7 +47,7 @@ public class ParserPaulSab
 		ParserJsonPoteaux pjPaulSabPoteaux = new ParserJsonPoteaux(resPaulSabPoteaux);
 		listeCodeOperator.addAll(pjPaulSabPoteaux.parse());
 		
-		//récupère la liste des Departures
+		//rï¿½cupï¿½re la liste des Departures
 		
 		String resPaulSabBus;
 		ParserJsonAreasList pjalPaulSabBus;

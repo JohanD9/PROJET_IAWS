@@ -14,7 +14,7 @@ public class ParserFacPharma
 {
 	private String idZoneArret;
 	private List<String> listeCodeOperator;
-	private List<Departure> listeDeparture;
+	private ArrayList<Departure> listeDeparture;
 	
 	public ParserFacPharma ()
 	{
@@ -23,9 +23,9 @@ public class ParserFacPharma
 		this.listeDeparture = new ArrayList<Departure>();
 	}
 	
-	public List<Departure> parse() throws IOException, JSONException
+	public ArrayList<Departure> parse() throws IOException, JSONException
 	{
-		// résupère l'id de la zone d'arret paul sab
+		// rï¿½supï¿½re l'id de la zone d'arret paul sab
 		
 		LaunchRequest requestFacPharmaId = new LaunchRequest(
 				"http://pt.data.tisseo.fr/placesList?format=json&term=faculte%20de%20pharmacie&displayOnlyStopAreas=1"
@@ -37,7 +37,7 @@ public class ParserFacPharma
 		
 		this.idZoneArret += placeFacPharma.getId();
 		
-		//récupère la liste des poteaux physiques
+		//rï¿½cupï¿½re la liste des poteaux physiques
 		
 		LaunchRequest requestFacPharmaPoteaux = new LaunchRequest("http://pt.data.tisseo.fr/stopPointsList?stopAreaId="
 				+ this.idZoneArret + "&format=json&key=a03561f2fd10641d96fb8188d209414d8");
@@ -47,7 +47,7 @@ public class ParserFacPharma
 		ParserJsonPoteaux pjFacPharmaPoteaux = new ParserJsonPoteaux(resFacPharmaPoteaux);
 		listeCodeOperator.addAll(pjFacPharmaPoteaux.parse());
 		
-		//récupère la liste des Departures
+		//rï¿½cupï¿½re la liste des Departures
 		
 		String resFacPharmaBus;
 		ParserJsonAreasList pjalFacPharmaBus;
