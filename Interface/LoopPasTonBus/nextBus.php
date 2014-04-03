@@ -51,48 +51,58 @@
 			<div class="span9">
 				<h2>Les prochains bus :</h2>
 				<hr class="monHR">
-				<form onchange="updateLignes()">
+
+				<form id="formArret" onchange="updateLignes()"
+					style="float: left; padding-right: 15px;">
 					<select id="arret" name="arret" size="1">
 						<option value="paulSab">Université Paul Sabatier
+						
 						<option value="facPharma">Faculté de Pharmacie
 					
 					</select>
 				</form>
+				<img id=refresh class="clic" src="pictures/refresh.png"
+					alt="Mettre à jour les prochains bus" height="25" width="25"
+					onclick="refreshBus();">
+
+				<div id="contenuBus">
 				<?php
-					exec ( "java -jar jar/gestionBus.jar",$html);
-					foreach ($html as $value)
-						echo $value . " ";?>
-				<div class="span3">
-					<h2>Infos :</h2>
-					<hr class="monHR">
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar</div>
+				exec ( "java -jar jar/gestionBus.jar", $html );
+				foreach ( $html as $value )
+					echo $value . "\n";
+				?>
+				</div>
+			</div>
+			<div class="span3">
+				<h2>Infos :</h2>
+				<hr class="monHR">
+				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
+				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
+				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
+				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
+				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
+				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
+				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
+				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
+				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
+				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
+				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
+				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
+				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
+				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
+				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
+				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
+				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
+				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
+				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
+				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
+				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
+				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
+				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
+				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
+				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
+				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
+				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
 			</div>
 		</div>
 	</div>

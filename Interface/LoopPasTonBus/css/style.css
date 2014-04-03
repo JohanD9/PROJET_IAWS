@@ -10,6 +10,10 @@ hr.monHR {
 	border-bottom: 3px solid #ffffff;
 }
 
+#refreshArret {
+	white-space:nowrap;
+}
+
 .station {
 	margin: 5px;
 	padding: 5px;
@@ -48,6 +52,7 @@ td.numBus {
 
 img.clic {
 	cursor:  pointer;
+	padding-left: 10px;
 }
 
 .infosDepart {

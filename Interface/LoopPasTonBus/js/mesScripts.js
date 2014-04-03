@@ -47,3 +47,47 @@ function updateLignes() {
 	
 	document.getElementById(station).style.display = "block";
 }
+
+
+function refreshBus() {
+	for(var i= 0; i < stationTab.length; i++)
+	{
+		if (document.getElementById(stationTab[i]).style.display === "block") {
+			var tmp = stationTab[i];
+		}
+			
+	}
+	var xhr = getXMLHttpRequest();
+
+    xhr.open("GET", "/LoopPasTonBus/php/updateLigne.php", false);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.send(null);
+
+    var rep = xhr.responseText;
+	document.getElementById('contenuBus').innerHTML = rep;
+	document.getElementById('arret').value=tmp;
+	updateLignes();
+	
+}
+
+function like(idImg) {
+	for(var i= 0; i < stationTab.length; i++)
+	{
+		var imgLike = document.getElementById("like"+idImg+stationTab[i])
+		var imgUnlike = document.getElementById("unlike"+idImg+stationTab[i])
+		imgLike.src="pictures/like_NB.png";
+		imgUnlike.src="pictures/unlike.png";
+			
+	}	
+}
+
+function unlike(idImg) {
+	for(var i= 0; i < stationTab.length; i++)
+	{
+		var imgLike = document.getElementById("like"+idImg+stationTab[i])
+		var imgUnlike = document.getElementById("unlike"+idImg+stationTab[i])
+
+		imgLike.src="pictures/like.png";
+		imgUnlike.src="pictures/unlike_NB.png";
+	}	
+}

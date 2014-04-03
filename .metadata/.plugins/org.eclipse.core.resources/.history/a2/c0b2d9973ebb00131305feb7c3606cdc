@@ -1,12 +1,11 @@
-package jsonObject;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
-import lienHttp.LaunchRequest;
+import java.util.EnumSet;
+import java.util.List;
+import java.util.Set;
 
 import org.json.JSONException;
-
-import parsers.ParserJsonAreasList;
 
 
 public class GestionPlace {
@@ -29,6 +28,7 @@ public class GestionPlace {
 		
 		LaunchRequest requestListAreasPaulSab = new LaunchRequest(requeteBusPaulSab);
 		String resultAreasPaulSab = requestListAreasPaulSab.get();
+		System.out.println(resultAreasPaulSab);
 		ParserJsonAreasList pjalPaulSab = new ParserJsonAreasList(resultAreasPaulSab);
 		listDeparture.addAll(pjalPaulSab.parse());
 	}
@@ -63,9 +63,7 @@ public class GestionPlace {
 					listShortnameInt.add(tmp);
 				}
 			} catch (Exception e) {
-				if (!listShortName.contains(courant.getLine().getShortName())) {
-					listShortName.add(courant.getLine().getShortName());
-				}
+				// TODO: handle exception
 			}
 		}
 		Collections.sort(listShortnameInt);
