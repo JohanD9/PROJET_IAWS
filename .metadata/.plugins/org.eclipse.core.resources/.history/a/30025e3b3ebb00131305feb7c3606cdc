@@ -28,6 +28,7 @@ public class GestionPlace {
 		
 		LaunchRequest requestListAreasPaulSab = new LaunchRequest(requeteBusPaulSab);
 		String resultAreasPaulSab = requestListAreasPaulSab.get();
+		System.out.println(resultAreasPaulSab);
 		ParserJsonAreasList pjalPaulSab = new ParserJsonAreasList(resultAreasPaulSab);
 		listDeparture.addAll(pjalPaulSab.parse());
 	}
@@ -56,15 +57,9 @@ public class GestionPlace {
 		ArrayList<Integer> listShortnameInt = new ArrayList<Integer>();
 		
 		for(Departure courant: listDeparture) {
-			try {
-				Integer tmp = Integer.parseInt(courant.getLine().getShortName());
-				if (!listShortnameInt.contains(tmp)) {
-					listShortnameInt.add(tmp);
-				}
-			} catch (Exception e) {
-				if (!listShortName.contains(courant.getLine().getShortName())) {
-					listShortName.add(courant.getLine().getShortName());
-				}
+			Integer tmp = Integer.parseInt(courant.getLine().getShortName());
+			if (!listShortnameInt.contains(tmp)) {
+				listShortnameInt.add(tmp);
 			}
 		}
 		Collections.sort(listShortnameInt);

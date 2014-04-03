@@ -28,6 +28,7 @@ public class GestionPlace {
 		
 		LaunchRequest requestListAreasPaulSab = new LaunchRequest(requeteBusPaulSab);
 		String resultAreasPaulSab = requestListAreasPaulSab.get();
+		System.out.println(resultAreasPaulSab);
 		ParserJsonAreasList pjalPaulSab = new ParserJsonAreasList(resultAreasPaulSab);
 		listDeparture.addAll(pjalPaulSab.parse());
 	}

@@ -25,9 +25,11 @@ public class GestionPlace {
 		String requeteBusPaulSab = new String(
 				"http://pt.data.tisseo.fr/departureBoard?format=json&stopPointId="
 						+place.getId()+"&key=a03561f2fd10641d96fb8188d209414d8");
+		System.out.println(requeteBusPaulSab);
 		
 		LaunchRequest requestListAreasPaulSab = new LaunchRequest(requeteBusPaulSab);
 		String resultAreasPaulSab = requestListAreasPaulSab.get();
+		
 		ParserJsonAreasList pjalPaulSab = new ParserJsonAreasList(resultAreasPaulSab);
 		listDeparture.addAll(pjalPaulSab.parse());
 	}
@@ -56,15 +58,9 @@ public class GestionPlace {
 		ArrayList<Integer> listShortnameInt = new ArrayList<Integer>();
 		
 		for(Departure courant: listDeparture) {
-			try {
-				Integer tmp = Integer.parseInt(courant.getLine().getShortName());
-				if (!listShortnameInt.contains(tmp)) {
-					listShortnameInt.add(tmp);
-				}
-			} catch (Exception e) {
-				if (!listShortName.contains(courant.getLine().getShortName())) {
-					listShortName.add(courant.getLine().getShortName());
-				}
+			Integer tmp = Integer.parseInt(courant.getLine().getShortName());
+			if (!listShortnameInt.contains(tmp)) {
+				listShortnameInt.add(tmp);
 			}
 		}
 		Collections.sort(listShortnameInt);

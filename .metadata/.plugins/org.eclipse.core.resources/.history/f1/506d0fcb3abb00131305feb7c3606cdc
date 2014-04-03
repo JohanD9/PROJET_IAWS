@@ -98,9 +98,9 @@ public class Main {
 					+ shortname + "</td>\n"
 							+ "<td class=\"infoBus\">" + gestionPaulSab.getListDepartureNum(shortname).get(0).getLine().getName() 
 							+ "<div class=icone style=\"float: right;\">\n"
-							+ "<img id=like" + shortname + ps + " class=\"clic\" src=\"pictures/like.png\" "
+							+ "<img id=like" + shortname + " class=\"clic\" src=\"pictures/like.png\" "
 							+ "alt=\"Like\" height=\"30\" width=\"30\" onclick=\"like('" + shortname + "');\">\n<span>" + nbLike + "</span>"
-							+ "<img id=unlike" + shortname + ps + " class=\"clic\" src=\"pictures/unlike.png\" "
+							+ "<img id=unlike" + shortname + " class=\"clic\" src=\"pictures/unlike.png\" "
 							+ "alt=\"Unlike\" height=\"30\" width=\"30\" onclick=\"unlike('" + shortname + "');\">\n<span>" + nbUnlike + "</span>"
 							+ "<img id=img" + shortname + ps
 							+ " class=\"clic\" style=\"float: right;\" src=\"pictures/plus.png\""
@@ -144,9 +144,9 @@ public class Main {
 					+ shortname + "</td>\n"
 							+ "<td class=\"infoBus\">" + gestionFacPharma.getListDepartureNum(shortname).get(0).getLine().getName()
 							+ "<div class=icone style=\"float: right;\">\n"
-							+ "<img id=like" + shortname + fp + " class=\"clic\" src=\"pictures/like.png\" "
+							+ "<img id=like" + shortname + fp +" class=\"clic\" src=\"pictures/like.png\" "
 							+ "alt=\"Like\" height=\"30\" width=\"30\" onclick=\"like('" + shortname + "');\">\n<span>" + nbLike + "</span>"
-							+ "<img id=unlike" + shortname + fp + " class=\"clic\" src=\"pictures/unlike.png\" "
+							+ "<img id=unlike" + shortname + " class=\"clic\" src=\"pictures/unlike.png\" "
 							+ "alt=\"Unlike\" height=\"30\" width=\"30\" onclick=\"unlike('" + shortname + "');\">\n<span>" + nbUnlike + "</span>"
 							+ "<img id=img" + shortname + fp
 							+ " class=\"clic\" style=\"float: right;\" src=\"pictures/plus.png\""
@@ -167,7 +167,7 @@ public class Main {
 			}
 			html += "</div>\n";
 		}
-		html += "</div>\n";
+		html += "</div>\n</div>\n";
 		
 		PrintStream pstream = new PrintStream(System.out, true, "UTF-8");
         pstream.println(html);
