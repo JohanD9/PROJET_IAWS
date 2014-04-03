@@ -1,15 +1,25 @@
+package main;
 import java.io.IOException;
-import java.io.ObjectInputStream.GetField;
 import java.io.PrintStream;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
 
+import jsonObject.Departure;
+import jsonObject.GestionPlace;
+import jsonObject.Place;
+import lienHttp.LaunchRequest;
+
 import org.json.JSONException;
+
+import parsers.ParserFacPharma;
+import parsers.ParserJsonStop;
+import parsers.ParserPaulSab;
 
 public class Main {
 
-	public static void main(String[] args) throws IOException, JSONException, ParseException {
+	public static void main(String[] args) throws IOException, JSONException, ParseException
+	{
 		/*
 		 * R�cup�ration de la place Paul Sabatier
 		 */
@@ -20,6 +30,9 @@ public class Main {
 
 		ParserJsonStop pjPaulSab = new ParserJsonStop(resPaulSab);
 		Place placePaulSab = pjPaulSab.parse();
+		
+		ParserPaulSab p = new ParserPaulSab();
+		p.parse();
 
 		/*
 		 * R�cup�ration de la place Facult� de pharmacie
@@ -187,5 +200,14 @@ public class Main {
 		
 		
 		
+		/*List<Departure> listeDep = new ArrayList<Departure>();
+		
+		ParserPaulSab p1 = new ParserPaulSab();
+		listeDep.addAll(p1.parse());
+		
+		ParserFacPharma p2 = new ParserFacPharma();
+		listeDep.addAll(p2.parse());
+		
+		System.out.println(listeDep);*/
 	}
 }

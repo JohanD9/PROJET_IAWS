@@ -1,3 +1,6 @@
+package parsers;
+import jsonObject.Place;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;

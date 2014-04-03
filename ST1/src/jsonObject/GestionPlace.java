@@ -1,11 +1,12 @@
+package jsonObject;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.EnumSet;
-import java.util.List;
-import java.util.Set;
+import lienHttp.LaunchRequest;
 
 import org.json.JSONException;
+
+import parsers.ParserJsonAreasList;
 
 
 public class GestionPlace {
