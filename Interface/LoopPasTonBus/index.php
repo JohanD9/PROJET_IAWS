@@ -4,7 +4,7 @@
 <title>LoopPasTonBus</title>
 <!-- On ouvre la fenêtre à la largeur de l'écran -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta charset="utf-8"/>
+<meta charset="utf-8" />
 <!-- Intégration du CSS Bootstrap -->
 <link href="bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
 <link href="css/style.css" rel="stylesheet" media="screen">
@@ -16,71 +16,70 @@
 	<script src="bootstrap/js/bootstrap.min.js"></script>
 
 	<!-- Conteneur principal -->
-	<div class="container" >
-			<!-- Notre barre de navigation -->
-			<div class="navbar navbar-inverse">
-				<div class="navbar-inner">
-					<!-- Bouton apparaissant sur les rÃ©solutions mobiles afin de faire apparaÃ®tre le menu de navigation -->
-					<a class="btn btn-navbar" data-toggle="collapse"
-						data-target=".nav-collapse"> <span class="icon-bar"></span> <span
-						class="icon-bar"></span> <span class="icon-bar"></span>
-					</a> <a class="brand" href="/LoopPasTonBus/index.php">LoopPasTonBus</a>
-					<!-- Structure du menu -->
-					<div class="nav-collapse collapse">
-						<ul class="nav">
-							<!-- Menu déroulant -->
-							<li class="dropdown"><a href="#" class="dropdown-toggle"
-								data-toggle="dropdown">Les applis<b class="caret"></b></a>
-								<ul class="dropdown-menu">
-									<li class="nav-header">Tisséo</li>
-									<li><a href="/LoopPasTonBus/nextBus.php">Mon prochain bus</a></li>
-									<li><a href="/LoopPasTonBus/nextMetro.php">Mon prochain métro</a></li>
-									<li class="divider"></li>
-									<li class="nav-header">VélôToulouse</li>
-									<li><a href="/LoopPasTonBus/velos.php">Les vélos dispos/libres</a></li>
-								</ul></li>
-							<li><a href="/LoopPasTonBus/aPropos.php">A propos</a></li>
-						</ul>
-					</div>
+	<div class="container">
+		<!-- Notre barre de navigation -->
+		<div class="navbar navbar-inverse">
+			<div class="navbar-inner">
+				<!-- Bouton apparaissant sur les rÃ©solutions mobiles afin de faire apparaÃ®tre le menu de navigation -->
+				<a class="btn btn-navbar" data-toggle="collapse"
+					data-target=".nav-collapse"> <span class="icon-bar"></span> <span
+					class="icon-bar"></span> <span class="icon-bar"></span>
+				</a> <a class="brand" href="/LoopPasTonBus/index.php">LoopPasTonBus</a>
+				<!-- Structure du menu -->
+				<div class="nav-collapse collapse">
+					<ul class="nav">
+						<!-- Menu déroulant -->
+						<li class="dropdown"><a href="#" class="dropdown-toggle"
+							data-toggle="dropdown">Les applis<b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li class="nav-header">Tisséo</li>
+								<li><a href="/LoopPasTonBus/nextBus.php">Mon prochain bus</a></li>
+								<li><a href="/LoopPasTonBus/nextMetro.php">Mon prochain métro</a></li>
+								<li class="divider"></li>
+								<li class="nav-header">VélôToulouse</li>
+								<li><a href="/LoopPasTonBus/velos.php">Les vélos dispos/libres</a></li>
+							</ul></li>
+						<li><a href="/LoopPasTonBus/aPropos.php">A propos</a></li>
+					</ul>
 				</div>
-			</div>
 
-			<!-- PremiÃ¨re ligne de notre grille -->
-			<div class="row show-grid">
-				<div class="span9">
-					<h2>Bienvenue sur LoopPasTonBus !</h2>
-					<hr class="monHR">
-					<img src="pictures/accueil.png" alt="Plan de Paul Sabatier">
-				</div>
-				<div class="span3">Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-					Sidebar Sidebar</div>
 			</div>
 		</div>
+
+		<!-- PremiÃ¨re ligne de notre grille -->
+		<div class="row show-grid">
+			<div class="span9">
+				<h2>Bienvenue sur LoopPasTonBus !</h2>
+				<hr class="monHR">
+				<img src="pictures/accueil.png" alt="Plan de Paul Sabatier">
+			</div>
+			<div class="span3">
+				<h2>Connexion :</h2>
+				<hr class="monHR">
+				<form class="form-inline" action="php/login.php" method="post">
+					<div class="form-group">
+						<label class="sr-only" for="exampleInputEmail2">Nom d'utilisateur</label>
+						<input type="text" class="form-control" name= "login" id="login"
+							placeholder="Entrez votre nom d'utilisateur">
+					</div><br>
+					<div class="form-group">
+						<label class="sr-only" for="exampleInputPassword2">Mot de passe</label>
+						<input type="password" class="form-control"
+							name= "password" id="password" placeholder="Entrez votre mot de passe">
+					</div><br>
+					<button type="submit" class="btn btn-default">Go !</button>
+				</form>
+				<?php
+					if (isset($_GET['log'])) {
+						echo "<p style=\"color:#B1221C;\">Nom d'utilisateur ou mot de passe non renseigné</p>";
+					}
+					if (isset($_GET['badLog'])) {
+						echo "<p style=\"color:#B1221C;\">Nom d'utilisateur ou mot de passe incorrect</p>";
+					}
+				?>
+				<hr>
+			</div>
+		</div>
+	</div>
 </body>
 </html>

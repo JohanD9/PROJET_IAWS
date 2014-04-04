@@ -102,3 +102,72 @@
   		addDocument($shortname, $like, $unlike);
   		return $unlike;
   	}
+  	
+  	/*********************************************************************************************
+  	 * 				FONCTION POUR LES UTILISATEURS
+  	 * *******************************************************************************************
+  	 */
+  	
+  	function addUser($login, $password) {
+  		$ch = curl_init();
+  		$user = array(
+  				'login' => $login,
+  				'password' => $password,
+  		);
+  		
+  		$payload = json_encode($user);
+  	
+  		curl_setopt($ch, CURLOPT_URL, 'http://localhost:5984/looppastonbus/'.$user['login']);
+  		curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'PUT'); /* or PUT */
+  		curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
+  		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+  		curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+  		'Content-type: application/json',
+  		'Accept: */*'
+  				));
+  				$response = curl_exec($ch);
+  				curl_close($ch);
+  	}
+  	
+  	function getUser($login) {
+  		$ch = curl_init();
+  		$documentID = $login;
+  		curl_setopt($ch, CURLOPT_URL, 'http://localhost:5984/looppastonbus/'.$documentID);
+  		curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
+  		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+  		curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+  		'Content-type: application/json',
+  		'Accept: */*'
+  				));
+  				$response = curl_exec($ch);
+  				curl_close($ch);
+  				return $response;
+  	}
+  	
+  	function getLogin($login) {
+  		$json = getUser($login);
+  		$user = json_decode($json,true);
+  			
+  		if (isset($user['login'])) {
+  			$res = $user['login'];
+  		} else {
+  			$res = "missingLogin";
+  		}
+  		return $res;
+  	}
+  	
+  	function getPassword($login) {
+  		$json = getUser($login);
+  		$user = json_decode($json,true);
+  		$res = $user['password'];
+  		return $res;
+  	}
+  	
+  	function verifyUser($login, $password) {
+  		$logintmp = getLogin($login);
+  		$passwordtmp = getPassword($login);
+  		
+  		if (($login != $logintmp) || ($passwordtmp != $password)) {
+  			return "badLogin";
+  		}
+  	}
