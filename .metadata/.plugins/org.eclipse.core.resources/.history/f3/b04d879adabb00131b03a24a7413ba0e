@@ -1,0 +1,37 @@
+package gestionST2;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.swing.text.Document;
+
+import com.fourspaces.couchdb.Database;
+import com.fourspaces.couchdb.Session;
+
+
+
+public class LikeUnlike {
+	private String paramLikeToStringJson(String id, String nbLike, String nbUnlike, String rev){
+		Map<String, String> comment = new HashMap<String, String>();
+	    comment.put("_id", id);
+	    comment.put("like", nbLike);
+	    comment.put("unlike", nbUnlike);
+	    if(!rev.equals("null")){
+	    	comment.put("_rev", rev);
+	    }
+	    String json = new GsonBuilder().create().toJson(comment, Map.class);
+	    
+	    return json;
+	}
+
+public String send_like_unlike(String id, String nbLike, String nbUnlike, String rev) {
+		String url_like = URL_LIKE + "like_unlike/" + id;
+		String json = paramLikeToStringJson(id, nbLike, nbUnlike, rev);
+		HttpClient httpCli = new DefaultHttpClient();
+
+HttpPut httpPut = new HttpPut(url_like);
+	        httpPut.setEntity(new StringEntity(json));
+	        httpPut.setHeader("Accept", "application/json");
+	        httpPut.setHeader("Content-type", "application/json");
+	        HttpResponse response = httpCli.execute(httpPut);
+}

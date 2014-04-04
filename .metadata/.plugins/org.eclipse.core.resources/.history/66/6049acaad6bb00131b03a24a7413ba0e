@@ -1,0 +1,34 @@
+package gestionST2;
+
+import javax.swing.text.Document;
+
+import com.fourspaces.couchdb.Database;
+import com.fourspaces.couchdb.Session;
+
+
+
+public class LikeUnlike {
+	Session s = new Session("localhost",5984);
+	Database db = s.getDatabase("foodb");
+
+	com.fourspaces.couchdb.Document doc = db.getDocument("documentid1234");
+	doc.put("foo","bar");
+	db.saveDocument(doc);
+
+	Document newdoc = new Document();
+	newdoc.put("foo","baz");
+	db.saveDocument(newdoc); // auto-generated id given by the database
+
+	// Running a view
+
+	ViewResult result = db.getAllDocuments(); // same as db.view("_all_dbs");
+	for (Document d: result.getResults()) {
+		System.out.println(d.getId());
+
+		/*
+			ViewResults don't actually contain the full document, only what the view
+			returned.  So, in order to get the full document, you need to request a
+			new copy from the database.
+		*/
+		Document full = db.getDocument(d.getId());
+}
