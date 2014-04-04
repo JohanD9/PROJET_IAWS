@@ -1,4 +1,4 @@
-package Parsers;
+package parsers;
 
 public class ParserBusTime
 {
