@@ -55,7 +55,7 @@ public class ParserFacPharma
 		for (String codeOperator : listeCodeOperator)
 		{
 			LaunchRequest requestFacPharmaBus = new LaunchRequest("http://pt.data.tisseo.fr/departureBoard?operatorCode="
-					+ codeOperator +"&number=2&format=json&key=a03561f2fd10641d96fb8188d209414d8");
+					+ codeOperator +"&number=4&format=json&key=a03561f2fd10641d96fb8188d209414d8");
 			
 			resFacPharmaBus = requestFacPharmaBus.get();
 			pjalFacPharmaBus = new ParserJsonAreasList(resFacPharmaBus);

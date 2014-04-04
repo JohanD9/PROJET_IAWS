@@ -23,7 +23,7 @@ public class Main {
 		String shortname = "";
 		String ps = "paulSab";
 		String fp = "facPharma";
-		String fd = "facDent";
+		
 		String displayDiv = "block";
 
 		// Parser
