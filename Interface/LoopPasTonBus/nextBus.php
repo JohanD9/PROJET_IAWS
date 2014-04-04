@@ -10,6 +10,7 @@
 <link href="css/style.css" rel="stylesheet" media="screen">
 </head>
 <body>
+	<?php include_once 'php/couchDbFunctions.php';?>
 	<!-- Intégration de la libraire jQuery -->
 	<script src="bootstrap/js/jquery-1.11.0.js"></script>
 	<!-- Intégration de la libraire de composants du Bootstrap -->
@@ -45,13 +46,12 @@
 				</div>
 			</div>
 		</div>
-
+		
 		<!-- PremiÃ¨re ligne de notre grille -->
 		<div class="row show-grid">
 			<div class="span9">
 				<h2>Les prochains bus :</h2>
 				<hr class="monHR">
-
 				<form id="formArret" onchange="updateLignes()"
 					style="float: left; padding-right: 15px;">
 					<select id="arret" name="arret" size="1">
@@ -64,7 +64,6 @@
 				<img id=refresh class="clic" src="pictures/refresh.png"
 					alt="Mettre à jour les prochains bus" height="25" width="25"
 					onclick="refreshBus();">
-
 				<div id="contenuBus">
 				<?php
 				exec ( "java -jar jar/gestionBus.jar", $html );

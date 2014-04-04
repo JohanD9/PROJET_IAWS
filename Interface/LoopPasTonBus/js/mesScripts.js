@@ -57,7 +57,7 @@ function refreshBus() {
 		}
 			
 	}
-	var xhr = getXMLHttpRequest();
+	/*var xhr = getXMLHttpRequest();
 
     xhr.open("GET", "/LoopPasTonBus/php/updateLigne.php", false);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
@@ -65,31 +65,61 @@ function refreshBus() {
 
     var rep = xhr.responseText;
 	document.getElementById('contenuBus').innerHTML = rep;
+	*/
+	window.location.reload();
 	document.getElementById('arret').value=tmp;
 	updateLignes();
 	
 }
 
 function like(idImg) {
-	for(var i= 0; i < stationTab.length; i++)
+	
+	/*for(var i= 0; i < stationTab.length; i++)
 	{
 		var imgLike = document.getElementById("like"+idImg+stationTab[i]);
 		var imgUnlike = document.getElementById("unlike"+idImg+stationTab[i]);
 		imgLike.src="pictures/like_NB.png";
 		imgUnlike.src="pictures/unlike.png";
+		
+	}*/
+	
+	var xhr = getXMLHttpRequest();
+
+	xhr.open("GET", "/LoopPasTonBus/php/likeUnlike.php?shortname=" + idImg + "&action=addLike", false);
+	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+	xhr.send(null);
+	var rep = xhr.responseText;
+	
+	for(var i= 0; i < stationTab.length; i++)
+	{
+		document.getElementById('nbLike' + idImg + stationTab[i]).innerHTML = rep;
+	}
 			
-	}	
+	
 }
 
 function unlike(idImg) {
-	for(var i= 0; i < stationTab.length; i++)
+	/*for(var i= 0; i < stationTab.length; i++)
 	{
 		var imgLike = document.getElementById("like"+idImg+stationTab[i]);
 		var imgUnlike = document.getElementById("unlike"+idImg+stationTab[i]);
 
 		imgLike.src="pictures/like.png";
 		imgUnlike.src="pictures/unlike_NB.png";
-	}	
+	}*/
+	
+	var xhr = getXMLHttpRequest();
+
+	xhr.open("GET", "/LoopPasTonBus/php/likeUnlike.php?shortname=" + idImg + "&action=addUnlike", false);
+	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+	xhr.send(null);
+	var rep = xhr.responseText;
+	
+	for(var i= 0; i < stationTab.length; i++)
+	{
+		document.getElementById('nbUnlike' + idImg + stationTab[i]).innerHTML = rep;
+	}
+	
 }
 
 function likeMetro(idImg) {
@@ -105,4 +135,32 @@ function unlikeMetro(idImg) {
 		var imgUnlike = document.getElementById("unlike"+idImg);
 		imgLike.src="pictures/like.png";
 		imgUnlike.src="pictures/unlike_NB.png";
+}
+
+function nbLike(shortname) {
+	var xhr = getXMLHttpRequest();
+	
+    xhr.open("GET", "/LoopPasTonBus/php/likeUnlike.php?shortname=" + shortname + "&action=getLike", false);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.send(null);
+    var rep = xhr.responseText;
+    
+    for(var i= 0; i < stationTab.length; i++)
+	{
+		document.getElementById('nbLike' + shortname + stationTab[i]).innerHTML = rep;
+	}
+}
+
+function nbUnlike(shortname) {
+	var xhr = getXMLHttpRequest();
+
+    xhr.open("GET", "/LoopPasTonBus/php/likeUnlike.php?shortname=" + shortname + "&action=getUnlike", false);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.send(null);
+    var rep = xhr.responseText;
+    
+    for(var i= 0; i < stationTab.length; i++)
+	{
+		document.getElementById('nbUnlike' + shortname + stationTab[i]).innerHTML = rep;
+	}
 }

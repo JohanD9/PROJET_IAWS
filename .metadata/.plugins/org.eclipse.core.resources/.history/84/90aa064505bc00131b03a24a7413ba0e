@@ -17,7 +17,9 @@ public class Main {
 	public static void main(String[] args) throws IOException, JSONException,
 			ParseException {
 
-		Boolean hr = false;	
+		Boolean hr = false;
+		int nbLike = 1050;
+		int nbUnlike = 103;
 		String shortname = "";
 		String ps = "paulSab";
 		String fp = "facPharma";
@@ -57,8 +59,8 @@ public class Main {
 					+ " class=\"clic\" src=\"pictures/like.png\" "
 					+ "alt=\"Like\" height=\"30\" width=\"30\" onclick=\"like('"
 					+ shortname
-					+ "');\">\n<span id=\"nbLike" + shortname + ps + "\">"
-					+ "<script type=\"text/javascript\">nbLike('" + shortname + "');</script>"
+					+ "');\">\n<span>"
+					+ nbLike
 					+ "</span>"
 					+ "<img id=unlike"
 					+ shortname
@@ -66,8 +68,8 @@ public class Main {
 					+ " class=\"clic\" src=\"pictures/unlike.png\" "
 					+ "alt=\"Unlike\" height=\"30\" width=\"30\" onclick=\"unlike('"
 					+ shortname
-					+ "');\">\n<span id=\"nbUnlike" + shortname + ps + "\">"
-					+ "<script type=\"text/javascript\">nbUnlike('" + shortname + "');</script>"
+					+ "');\">\n<span>"
+					+ nbUnlike
 					+ "</span>"
 					+ "<img id=img"
 					+ shortname
@@ -134,8 +136,8 @@ public class Main {
 					+ " class=\"clic\" src=\"pictures/like.png\" "
 					+ "alt=\"Like\" height=\"30\" width=\"30\" onclick=\"like('"
 					+ shortname
-					+ "');\">\n<span id=\"nbLike" + shortname + fp + "\">"
-					
+					+ "');\">\n<span>"
+					+ nbLike
 					+ "</span>"
 					+ "<img id=unlike"
 					+ shortname
@@ -143,7 +145,8 @@ public class Main {
 					+ " class=\"clic\" src=\"pictures/unlike.png\" "
 					+ "alt=\"Unlike\" height=\"30\" width=\"30\" onclick=\"unlike('"
 					+ shortname
-					+ "');\">\n<span id=\"nbUnlike" + shortname + fp + "\">"
+					+ "');\">\n<span>"
+					+ nbUnlike
 					+ "</span>"
 					+ "<img id=img"
 					+ shortname
@@ -158,8 +161,6 @@ public class Main {
 					+ fp
 					+ "');\">\n</div>\n</td>\n"
 					+ "</tr>\n</table>\n"
-					+ "<script type=\"text/javascript\">nbLike('" + shortname + "');</script>"
-					+ "<script type=\"text/javascript\">nbUnlike('" + shortname + "');</script>"
 					+ "<div style=\"display: none;\" id=\"ligne"
 					+ shortname
 					+ fp + "\" class=\"infosDepart\">";
