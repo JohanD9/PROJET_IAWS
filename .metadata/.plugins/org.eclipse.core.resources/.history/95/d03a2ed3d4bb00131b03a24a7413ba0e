@@ -1,0 +1,21 @@
+package gestionST2;
+
+import java.util.Map;
+
+public class LikeUnlike {
+	public String send_like_unlike(String id, String nbLike, String nbUnlike, String rev) {
+		
+		private String paramLikeToStringJson(String id, String nbLike, String nbUnlike, String rev){
+			Map<String, String> comment = new HashMap<String, String>();
+		    comment.put("_id", id);
+		    comment.put("like", nbLike);
+		    comment.put("unlike", nbUnlike);
+		    if(!rev.equals("null")){
+		    	comment.put("_rev", rev);
+		    }
+		    String json = new GsonBuilder().create().toJson(comment, Map.class);
+		    
+		    return json;
+		}
+	}
+}

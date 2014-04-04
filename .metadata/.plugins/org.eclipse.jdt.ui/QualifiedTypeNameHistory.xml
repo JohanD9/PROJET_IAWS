@@ -24,4 +24,7 @@
 <fullyQualifiedTypeName name="java.util.EnumSet"/>
 <fullyQualifiedTypeName name="GestionPlace"/>
 <fullyQualifiedTypeName name="java.io.PrintStream"/>
+<fullyQualifiedTypeName name="parsers.ParserFacPharma"/>
+<fullyQualifiedTypeName name="parsers.ParserPaulSab"/>
+<fullyQualifiedTypeName name="parsers.ParserFacDentaire"/>
 </qualifiedTypeNameHistroy>
