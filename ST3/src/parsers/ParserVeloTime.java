@@ -28,7 +28,6 @@ public class ParserVeloTime
 	}
 
 
-
 	private void setDistance(String distance) {
 		this.distance = distance;
 	}
