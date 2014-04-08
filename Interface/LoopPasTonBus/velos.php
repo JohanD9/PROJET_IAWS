@@ -11,6 +11,7 @@
 
 </head>
 <body>
+	<?php include_once 'php/functions.php'; ?>
 	<!-- Intégration de la libraire jQuery -->
 	<script src="bootstrap/js/jquery-1.11.0.js"></script>
 	<!-- Intégration de la libraire de composants du Bootstrap -->
@@ -42,6 +43,14 @@
 								</ul></li>
 							<li><a href="/LoopPasTonBus/aPropos.php">A propos</a></li>
 						</ul>
+						<?php
+						session_start ();
+						if (isClientLog ()) {
+							echo "<span style=\"float:right;\"><a href=\"/LoopPasTonBus/php/logout.php\">Deconnexion</a></span>";
+						} else {
+							echo header('Location: /LoopPasTonBus/index.php');
+						}
+					?>
 					</div>
 				</div>
 			</div>

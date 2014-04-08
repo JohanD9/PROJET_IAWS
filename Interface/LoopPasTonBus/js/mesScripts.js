@@ -1,9 +1,9 @@
 var stationTab = ["paulSab", "facPharma"];
 
-// Function to get a XMLHttpRequest object 
+// Function to get a XMLHttpRequest object
 function getXMLHttpRequest() {
     var xhr = null;
-
+    
     if (window.XMLHttpRequest || window.ActiveXObject) {
         if (window.ActiveXObject) {
             try {
@@ -22,7 +22,7 @@ function getXMLHttpRequest() {
     return xhr;
 }
 
-//Function to display or hide an admin panel
+// Function to display or hide an admin panel
 function show_panel(id, idImg) {
     var div = document.getElementById(id);
     var img = document.getElementById(idImg);
@@ -57,15 +57,16 @@ function refreshBus() {
 		}
 			
 	}
-	/*var xhr = getXMLHttpRequest();
-
-    xhr.open("GET", "/LoopPasTonBus/php/updateLigne.php", false);
-    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    xhr.send(null);
-
-    var rep = xhr.responseText;
-	document.getElementById('contenuBus').innerHTML = rep;
-	*/
+	/*
+	 * var xhr = getXMLHttpRequest();
+	 * 
+	 * xhr.open("GET", "/LoopPasTonBus/php/updateLigne.php", false);
+	 * xhr.setRequestHeader("Content-Type",
+	 * "application/x-www-form-urlencoded"); xhr.send(null);
+	 * 
+	 * var rep = xhr.responseText;
+	 * document.getElementById('contenuBus').innerHTML = rep;
+	 */
 	window.location.reload();
 	document.getElementById('arret').value=tmp;
 	updateLignes();
@@ -73,40 +74,40 @@ function refreshBus() {
 }
 
 function like(idImg) {
-	
-	/*for(var i= 0; i < stationTab.length; i++)
+	for(var i= 0; i < stationTab.length; i++)
 	{
 		var imgLike = document.getElementById("like"+idImg+stationTab[i]);
-		var imgUnlike = document.getElementById("unlike"+idImg+stationTab[i]);
-		imgLike.src="pictures/like_NB.png";
-		imgUnlike.src="pictures/unlike.png";
-		
-	}*/
-	
-	var xhr = getXMLHttpRequest();
+		if (imgLike != null) {
+			imgLike.src="pictures/like_NB.png";
+		}
+	}	
 
+	var xhr = getXMLHttpRequest();
 	xhr.open("GET", "/LoopPasTonBus/php/likeUnlike.php?shortname=" + idImg + "&action=addLike", false);
 	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 	xhr.send(null);
 	var rep = xhr.responseText;
 	
-	for(var i= 0; i < stationTab.length; i++)
+	for(i= 0; i < stationTab.length; i++)
 	{
-		document.getElementById('nbLike' + idImg + stationTab[i]).innerHTML = rep;
+		var doc = document.getElementById('nbLike' + idImg + stationTab[i]);
+		if (doc != null) {
+			doc.innerHTML = rep;
+		}
 	}
 			
 	
 }
 
 function unlike(idImg) {
-	/*for(var i= 0; i < stationTab.length; i++)
+	
+	for(var i= 0; i < stationTab.length; i++)
 	{
-		var imgLike = document.getElementById("like"+idImg+stationTab[i]);
 		var imgUnlike = document.getElementById("unlike"+idImg+stationTab[i]);
-
-		imgLike.src="pictures/like.png";
-		imgUnlike.src="pictures/unlike_NB.png";
-	}*/
+		if (imgUnlike != null) {
+			imgUnlike.src="pictures/unlike_NB.png";
+		}
+	}
 	
 	var xhr = getXMLHttpRequest();
 
@@ -115,9 +116,12 @@ function unlike(idImg) {
 	xhr.send(null);
 	var rep = xhr.responseText;
 	
-	for(var i= 0; i < stationTab.length; i++)
+	for(i= 0; i < stationTab.length; i++)
 	{
-		document.getElementById('nbUnlike' + idImg + stationTab[i]).innerHTML = rep;
+		var doc = document.getElementById('nbUnlike' + idImg + stationTab[i]);
+		if (doc != null) {
+			doc.innerHTML = rep;
+		}
 	}
 	
 }
@@ -145,9 +149,19 @@ function nbLike(shortname) {
     xhr.send(null);
     var rep = xhr.responseText;
     
+    xhr.open("GET", "/LoopPasTonBus/php/likeUnlike.php?shortname=" + shortname + "&action=getUserLike", false);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.send(null);
+    var rep2 = xhr.responseText;
+    
     for(var i= 0; i < stationTab.length; i++)
 	{
 		document.getElementById('nbLike' + shortname + stationTab[i]).innerHTML = rep;
+		
+		// Teste si l'utilisateur aime deja cette ligne
+	    if (rep2 == 1) {
+	    	document.getElementById("like"+shortname+stationTab[i]).src = "pictures/like_NB.png";
+	    }
 	}
 }
 
@@ -162,5 +176,15 @@ function nbUnlike(shortname) {
     for(var i= 0; i < stationTab.length; i++)
 	{
 		document.getElementById('nbUnlike' + shortname + stationTab[i]).innerHTML = rep;
+		
+		// Teste si l'utilisateur aime deja cette ligne
+		xhr.open("GET", "/LoopPasTonBus/php/likeUnlike.php?shortname=" + shortname + "&action=getUserUnlike", false);
+	    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+	    xhr.send(null);
+	    var rep2 = xhr.responseText;
+	    
+	    if (rep2 == 1) {
+	    	document.getElementById("unlike"+shortname+stationTab[i]).src = "pictures/unlike_NB.png";
+	    }
 	}
 }

@@ -10,6 +10,7 @@
 <link href="css/style.css" rel="stylesheet" media="screen">
 </head>
 <body>
+	<?php include_once 'php/functions.php'; ?>
 	<!-- Intégration de la libraire jQuery -->
 	<script src="bootstrap/js/jquery-1.11.0.js"></script>
 	<!-- Intégration de la libraire de composants du Bootstrap -->
@@ -41,6 +42,12 @@
 							</ul></li>
 						<li><a href="/LoopPasTonBus/aPropos.php">A propos</a></li>
 					</ul>
+					<?php
+						session_start ();
+						if (isClientLog ()) {
+							echo "<span style=\"float:right;\"><a href=\"/LoopPasTonBus/php/logout.php\">Deconnexion</a></span>";
+						}
+						?>
 				</div>
 
 			</div>
@@ -54,30 +61,68 @@
 				<img src="pictures/accueil.png" alt="Plan de Paul Sabatier">
 			</div>
 			<div class="span3">
-				<h2>Connexion :</h2>
-				<hr class="monHR">
-				<form class="form-inline" action="php/login.php" method="post">
-					<div class="form-group">
-						<label class="sr-only" for="exampleInputEmail2">Nom d'utilisateur</label>
-						<input type="text" class="form-control" name= "login" id="login"
-							placeholder="Entrez votre nom d'utilisateur">
-					</div><br>
-					<div class="form-group">
-						<label class="sr-only" for="exampleInputPassword2">Mot de passe</label>
-						<input type="password" class="form-control"
-							name= "password" id="password" placeholder="Entrez votre mot de passe">
-					</div><br>
-					<button type="submit" class="btn btn-default">Go !</button>
-				</form>
 				<?php
-					if (isset($_GET['log'])) {
+				if (isClientLog ()) {
+					echo "<h2>Infos :</h2>
+				<hr class=\"monHR\">
+				<span>connecté en tant que : " . $_SESSION ['login'] . "</span>";
+				} else {
+					echo "<h2>Connexion :</h2>
+				<hr class=\"monHR\">
+				<form class=\"form-inline\" action=\"php/login.php\" method=\"post\">
+					<div class=\"form-group\">
+						<label class=\"sr-only\" for=\"exampleInputEmail2\">Nom d'utilisateur</label>
+						<input type=\"text\" class=\"form-control\" name=\"login\" id=\"login\"
+							placeholder=\"Entrez votre nom d'utilisateur\">
+					</div>
+					<br>
+					<div class=\"form-group\">
+						<label class=\"sr-only\" for=\"exampleInputPassword2\">Mot de passe</label>
+						<input type=\"password\" class=\"form-control\" name=\"password\"
+							id=\"password\" placeholder=\"Entrez votre mot de passe\">
+					</div>
+					<br>
+					<button type=\"submit\" class=\"btn btn-default\">Go !</button>
+				</form>";
+					if (isset ( $_GET ['log'] )) {
 						echo "<p style=\"color:#B1221C;\">Nom d'utilisateur ou mot de passe non renseigné</p>";
 					}
-					if (isset($_GET['badLog'])) {
+					if (isset ( $_GET ['badLog'] )) {
 						echo "<p style=\"color:#B1221C;\">Nom d'utilisateur ou mot de passe incorrect</p>";
 					}
+					echo "<hr>
+				<h2>Inscription :</h2>
+				<hr class=\"monHR\">
+				<form class=\"form-inline\" action=\"php/registration.php\" method=\"post\">
+						<div class=\"form-group\">
+						<label class=\"sr-only\" for=\"exampleInputEmail2\">Nom d'utilisateur</label>
+						<input type=\"text\" class=\"form-control\" name=\"loginInscription\" id=\"loginInscription\"
+							placeholder=\"Entrez un nom d'utilisateur\">
+					</div>
+					<br>
+					<div class=\"form-group\">
+						<label class=\"sr-only\" for=\"exampleInputPassword2\">Mot de passe</label>
+						<input type=\"password\" class=\"form-control\" name=\"passwordInscription\"
+							id=\"passwordInscription\" placeholder=\"Entrez un mot de passe\">
+					</div>
+					<div class=\"form-group\">
+						<label class=\"sr-only\" for=\"exampleInputPassword2\">Vérification du mot de passe</label>
+						<input type=\"password\" class=\"form-control\" name=\"passwordInscriptionVerif\"
+							id=\"passwordInscriptionVerif\" placeholder=\"Entrez de nouveau le mot de passe\">
+					</div>
+					<br>
+					<button type=\"submit\" class=\"btn btn-default\">Inscription !</button>
+				</form>";
+					if (isset ( $_GET ['logIns'] )) {
+						echo "<p style=\"color:#B1221C;\">Nom d'utilisateur ou mot de passe non renseigné</p>";
+					}
+					if (isset ( $_GET ['usedLogin'] )) {
+						echo "<p style=\"color:#B1221C;\">Nom d'utilisateur déjà utilisé</p>";
+					}
+				}
 				?>
-				<hr>
+				
+				
 			</div>
 		</div>
 	</div>

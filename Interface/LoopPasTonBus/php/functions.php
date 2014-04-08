@@ -1,5 +1,18 @@
 <?php
 
+/*
+ * Function to kown if an client is log on the website
+* @return true if the clien is log, else return false
+*/
+
+function isClientLog() {
+	if ((isset($_SESSION['login'])) && $_SESSION['ip'] == $_SERVER['REMOTE_ADDR']) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
 function yourTime() {
 	$dateCourante = getdate();
 	if ($dateCourante['weekday'] === "Friday" || $dateCourante['weekday'] === "Saturday") {

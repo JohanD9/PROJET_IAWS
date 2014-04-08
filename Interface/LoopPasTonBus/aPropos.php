@@ -41,6 +41,12 @@
 								</ul></li>
 							<li><a href="/LoopPasTonBus/aPropos.php">A propos</a></li>
 						</ul>
+						<?php
+						session_start ();
+						if (isClientLog ()) {
+							echo "<span style=\"float:right;\"><a href=\"/LoopPasTonBus/php/logout.php\">Deconnexion</a></span>";
+						}
+						?>
 					</div>
 				</div>
 			</div>
