@@ -21,6 +21,8 @@ if ($_POST['loginInscription'] != "" && $_POST['passwordInscription'] != "" && $
 			
 			header('Location: /LoopPasTonBus/index.php');
 		}
+		header('Location: /LoopPasTonBus/index.php?basPwd');
 	}
 } else {
+	header('Location: /LoopPasTonBus/index.php?logIns');
 }

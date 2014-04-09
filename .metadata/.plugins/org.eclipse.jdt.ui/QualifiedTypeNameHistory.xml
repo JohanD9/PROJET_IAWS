@@ -24,7 +24,6 @@
 <fullyQualifiedTypeName name="java.util.EnumSet"/>
 <fullyQualifiedTypeName name="GestionPlace"/>
 <fullyQualifiedTypeName name="java.io.PrintStream"/>
-<fullyQualifiedTypeName name="parsers.ParserFacPharma"/>
 <fullyQualifiedTypeName name="parsers.ParserPaulSab"/>
 <fullyQualifiedTypeName name="parsers.ParserFacDentaire"/>
 <fullyQualifiedTypeName name="java.io.UnsupportedEncodingException"/>
@@ -35,4 +34,8 @@
 <fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="com.google.gson.GsonBuilder"/>
 <fullyQualifiedTypeName name="org.apache.commons.httpclient.HttpClient"/>
+<fullyQualifiedTypeName name="jsonObject.GestionPlace"/>
+<fullyQualifiedTypeName name="jsonObject.Place"/>
+<fullyQualifiedTypeName name="parsers.ParserFacPharma"/>
+<fullyQualifiedTypeName name="jsonObject.Departure"/>
 </qualifiedTypeNameHistroy>

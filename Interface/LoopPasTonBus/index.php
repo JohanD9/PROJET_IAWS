@@ -15,6 +15,7 @@
 	<script src="bootstrap/js/jquery-1.11.0.js"></script>
 	<!-- Intégration de la libraire de composants du Bootstrap -->
 	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="js/mesScripts.js"></script>
 
 	<!-- Conteneur principal -->
 	<div class="container">
@@ -39,13 +40,15 @@
 								<li class="divider"></li>
 								<li class="nav-header">VélôToulouse</li>
 								<li><a href="/LoopPasTonBus/velos.php">Les vélos dispos/libres</a></li>
+								<li><a href="/LoopPasTonBus/veloBus.php">Bus/Métro ou Vélô?</a></li>
+								
 							</ul></li>
 						<li><a href="/LoopPasTonBus/aPropos.php">A propos</a></li>
 					</ul>
 					<?php
 						session_start ();
 						if (isClientLog ()) {
-							echo "<span style=\"float:right;\"><a href=\"/LoopPasTonBus/php/logout.php\">Deconnexion</a></span>";
+							echo "<span style=\"float:right;\"><a href=\"/LoopPasTonBus/php/logout.php\">Deconnexion (". $_SESSION['login'].")</a></span>";
 						}
 						?>
 				</div>
@@ -65,7 +68,9 @@
 				if (isClientLog ()) {
 					echo "<h2>Infos :</h2>
 				<hr class=\"monHR\">
-				<span>connecté en tant que : " . $_SESSION ['login'] . "</span>";
+				<span>connecté en tant que : " . $_SESSION ['login'] . "</span>
+				<hr>
+				<a href=\"#\" onClick=\"pop()\">lien</a>";
 				} else {
 					echo "<h2>Connexion :</h2>
 				<hr class=\"monHR\">

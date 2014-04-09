@@ -38,6 +38,7 @@
 									<li class="divider"></li>
 									<li class="nav-header">VélôToulouse</li>
 									<li><a href="/LoopPasTonBus/velos.php">Les vélos dispos/libres</a></li>
+									<li><a href="/LoopPasTonBus/veloBus.php">Bus/Métro ou Vélô?</a></li>
 								</ul></li>
 							<li><a href="/LoopPasTonBus/aPropos.php">A propos</a></li>
 						</ul>

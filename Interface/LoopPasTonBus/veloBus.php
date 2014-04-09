@@ -8,10 +8,13 @@
 <!-- Intégration du CSS Bootstrap -->
 <link href="bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
 <link href="css/style.css" rel="stylesheet" media="screen">
+<link rel="stylesheet"
+	href="http://cimm.tisseo.fr/direct-mb-cimm-1.0/cimm.css"
+	type="text/css" />
 </head>
 <body>
-	<?php include_once 'php/couchDbFunctions.php';?>
-	<?php include_once 'php/functions.php'; ?>
+	<?php include("php/functions.php"); ?>
+	
 	<!-- Intégration de la libraire jQuery -->
 	<script src="bootstrap/js/jquery-1.11.0.js"></script>
 	<!-- Intégration de la libraire de composants du Bootstrap -->
@@ -46,45 +49,56 @@
 						<li><a href="/LoopPasTonBus/aPropos.php">A propos</a></li>
 					</ul>
 					<?php
-						session_start ();
-						if (isClientLog ()) {
-							echo "<span style=\"float:right;\"><a href=\"/LoopPasTonBus/php/logout.php\">Deconnexion (". $_SESSION['login'].")</a></span>";
-						} else {
-							echo header('Location: /LoopPasTonBus/index.php');
-						}
+					session_start ();
+					if (isClientLog ()) {
+						echo "<span style=\"float:right;\"><a href=\"/LoopPasTonBus/php/logout.php\">Deconnexion (" . $_SESSION ['login'] . ")</a></span>";
+					} else {
+						echo header ( 'Location: /LoopPasTonBus/index.php' );
+					}
 					?>
 				</div>
 			</div>
 		</div>
-		
+
 		<!-- PremiÃ¨re ligne de notre grille -->
 		<div class="row show-grid">
 			<div class="span9">
-				<h2>Les prochains bus :</h2>
+				<h2>Le Vélô ou le Bus?</h2>
 				<hr class="monHR">
-				<form id="formArret" onchange="updateLignes()"
-					style="float: left; padding-right: 15px;">
-					<select id="arret" name="arret" size="1">
-						<option value="paulSab">Université Paul Sabatier
-						
-						<option value="facPharma">Faculté de Pharmacie
-					
-					</select>
-				</form>
-				<img id=refresh class="clic" src="pictures/refresh.png"
-					alt="Mettre à jour les prochains bus" height="25" width="25"
-					onclick="refreshBus();">
-				<div id="contenuBus">
-				<?php
-				exec ( "java -jar jar/gestionBus.jar", $html );
-				foreach ( $html as $value )
-					echo $value . "\n";
-				?>
+				<div id="veloOuBus?">
+					<div id="getInfos">
+						<form class="form-inline">
+							<div class="form-group">
+							<label class="sr-only">Départ :</label>
+								<select id="arret" name="arret" size="1">
+									<option value="paulSab">Université Paul Sabatier
+									<option value="facPharma">Faculté de Pharmacie
+								</select>
+							</div>
+							<br>
+							<div class="form-group">
+								<label class="sr-only" >Arrivée :</label>
+								<input type="text" class="form-control"
+									id="arriveeZone" placeholder="Donnez un destination">
+							</div>
+							<br>
+							<button type="submit" class="btn btn-default">Rechercher</button>
+						</form>
+					</div>
+					<hr>
+					<div id="tempsBus">
+						<span style="font-size: large; font-weight: bold;">Temps de trajet
+							en Bus : </span> <span class="heure">18 min</span>
+					</div>
+					<hr>
+					<div id="tempsVélo">
+						<span style="font-size: large; font-weight: bold;">Temps de trajet
+							en Vélô : </span> <span class="heure">25 min</span>
+					</div>
+					<hr>
 				</div>
 			</div>
-			<div class="span3">
-				<h2>Infos :</h2>
-				<hr class="monHR">
+			<div class="span3">Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
 				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
 				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
 				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
@@ -111,8 +125,7 @@
 				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
 				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
 				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-			</div>
+				Sidebar Sidebar</div>
 		</div>
 	</div>
 </body>

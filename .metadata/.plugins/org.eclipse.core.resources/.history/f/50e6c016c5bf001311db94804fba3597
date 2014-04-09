@@ -3,7 +3,6 @@ package main;
 import java.io.IOException;
 import java.text.ParseException;
 
-import jsonObject.Departure;
 import jsonObject.GestionPlace;
 import jsonObject.Place;
 
@@ -18,7 +17,7 @@ public class Main
 
 	public static void main (String[] args) throws IOException, JSONException, ParseException
 	{
-		/*String lieuOrig = new String ("Universite paul sabatier");
+		String lieuOrig = new String ("Universite paul sabatier");
 		String villeOrig = new String ("toulouse");
 		String lieuArriv = new String ("jeanne d'arc");
 		String villeArriv = new String ("toulouse");
@@ -31,13 +30,9 @@ public class Main
 		ParserBusTime p2 = new ParserBusTime();
 		p2.parse(lieuOrig.replaceAll(" ", "%20"), villeOrig.replaceAll(" ", "%20"), lieuArriv.replaceAll(" ", "%20"), villeArriv.replaceAll(" ", "%20"));
 		
-		System.out.println(p2.toString());*/
+		System.out.println(p2.toString());
 		
 		GestionPlace testGestion = new GestionPlace(new ParserFacPharma().parse());
-		
-		for (Departure tmp:testGestion.getListDeparture()) {
-			tmp.getLine().getNetwork().
-		}
 	}
 
 }

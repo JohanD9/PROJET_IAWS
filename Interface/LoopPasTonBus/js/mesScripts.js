@@ -177,7 +177,7 @@ function nbUnlike(shortname) {
 	{
 		document.getElementById('nbUnlike' + shortname + stationTab[i]).innerHTML = rep;
 		
-		// Teste si l'utilisateur aime deja cette ligne
+		// Teste si l'utilisateur aime deja cette lignewindow.open('/LoopPasTonBus/php/popup.php','INFOS','menubar=no, scrollbars=no, top='+top+', left='+left+', width='+width+', height='+height+'');
 		xhr.open("GET", "/LoopPasTonBus/php/likeUnlike.php?shortname=" + shortname + "&action=getUserUnlike", false);
 	    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 	    xhr.send(null);
@@ -188,3 +188,11 @@ function nbUnlike(shortname) {
 	    }
 	}
 }
+
+function pop() {
+	largeur = 500;
+	hauteur = 500;
+	var top=(screen.height-hauteur)/2;
+	var left=(screen.width-largeur)/2;
+	window.open('/LoopPasTonBus/php/popup.php','INFOS',"top="+top+",left="+left+",width="+largeur+",height="+hauteur+",titlebar=0,directories=0,location=0,menubar=0,resizable=0,scrollbars=1,status=0,toolbar=0" );
+	}
