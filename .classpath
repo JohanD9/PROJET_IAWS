@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="ST1/src"/>
+	<classpathentry kind="src" path="ST2/src"/>
+	<classpathentry kind="src" path="ST3/src"/>
+	<classpathentry kind="src" path="ST4/src"/>
+	<classpathentry kind="lib" path="google-gson-2.2.4/gson-2.2.4-javadoc.jar"/>
+	<classpathentry kind="lib" path="google-gson-2.2.4/gson-2.2.4-sources.jar"/>
+	<classpathentry kind="lib" path="google-gson-2.2.4/gson-2.2.4.jar"/>
+	<classpathentry kind="lib" path="Interface/LoopPasTonBus/jar/gestionBus.jar"/>
+	<classpathentry kind="lib" path="Interface/LoopPasTonBus/jar/gestionVelo.jar"/>
+	<classpathentry kind="lib" path="JAR/commons-httpclient-3.1.jar"/>
+	<classpathentry kind="lib" path="JAR/google-gson-2.2.4/gson-2.2.4-javadoc.jar"/>
+	<classpathentry kind="lib" path="JAR/google-gson-2.2.4/gson-2.2.4-sources.jar"/>
+	<classpathentry kind="lib" path="JAR/google-gson-2.2.4/gson-2.2.4.jar"/>
+	<classpathentry kind="lib" path="JAR/org.json-20120521.jar"/>
+	<classpathentry kind="lib" path="ST1/gestionBus.jar"/>
+	<classpathentry kind="lib" path="ST1/org.json-20120521.jar"/>
+	<classpathentry kind="lib" path="ST2/couchdb4j-0.1.2.jar"/>
+	<classpathentry kind="lib" path="ST4/gestionBus.jar"/>
+	<classpathentry kind="lib" path="ST4/gestionVelo.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="ST4/bin"/>
+</classpath>
