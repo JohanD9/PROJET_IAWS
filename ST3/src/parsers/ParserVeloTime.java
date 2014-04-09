@@ -23,7 +23,7 @@ public class ParserVeloTime
 		this.endAddress = new String();
 	}
 	
-	private String getDistance() {
+	public String getDistance() {
 		return distance;
 	}
 
@@ -34,7 +34,7 @@ public class ParserVeloTime
 
 
 
-	private String getDuration() {
+	public String getDuration() {
 		return duration;
 	}
 
@@ -46,7 +46,7 @@ public class ParserVeloTime
 
 
 
-	private String getStartAddress() {
+	public String getStartAddress() {
 		return startAddress;
 	}
 
@@ -58,7 +58,7 @@ public class ParserVeloTime
 
 
 
-	private String getEndAdress() {
+	public String getEndAdress() {
 		return endAddress;
 	}
 
