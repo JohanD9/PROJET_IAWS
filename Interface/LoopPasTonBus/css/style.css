@@ -92,6 +92,31 @@ p.direction {
 	font-size: 20px;
 	font-weight: bold;
 }
+
+#infosTrajetBusVelo {
+	border:2px dotted;
+	border-color: #00ACFF;
+	border-radius: 10px;
+	margin: 20px;
+	padding: 20px;
+	display: none
+
+}
+
+.infos {
+	cursor:  pointer;
+	padding: 10px;
+	text-align:center;
+}
+
+.infos:hover {
+	background-color: #00ACFF;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+    transition: background 1s;
+}
 	
 
 

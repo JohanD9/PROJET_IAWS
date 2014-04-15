@@ -43,7 +43,6 @@
 								<li><a href="/LoopPasTonBus/veloBus.php">Bus/Métro ou Vélô?</a></li>
 								
 							</ul></li>
-						<li><a href="/LoopPasTonBus/aPropos.php">A propos</a></li>
 					</ul>
 					<?php
 						session_start ();
@@ -67,10 +66,10 @@
 				<?php
 				if (isClientLog ()) {
 					echo "<h2>Infos :</h2>
-				<hr class=\"monHR\">
-				<span>connecté en tant que : " . $_SESSION ['login'] . "</span>
-				<hr>
-				<a href=\"#\" onClick=\"pop()\">lien</a>";
+				<hr class=\"monHR\">";
+				exec ( "java -jar jar/getInfos.jar", $html );
+				foreach ( $html as $value )
+					echo $value . "\n";
 				} else {
 					echo "<h2>Connexion :</h2>
 				<hr class=\"monHR\">

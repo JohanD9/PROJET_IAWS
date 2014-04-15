@@ -46,7 +46,6 @@
 								<li><a href="/LoopPasTonBus/velos.php">Les vélos dispos/libres</a></li>
 								<li><a href="/LoopPasTonBus/veloBus.php">Bus/Métro ou Vélô?</a></li>
 							</ul></li>
-						<li><a href="/LoopPasTonBus/aPropos.php">A propos</a></li>
 					</ul>
 					<?php
 					session_start ();
@@ -67,65 +66,44 @@
 				<hr class="monHR">
 				<div id="veloOuBus?">
 					<div id="getInfos">
-						<form class="form-inline">
-							<div class="form-group">
-							<label class="sr-only">Départ :</label>
-								<select id="arret" name="arret" size="1">
-									<option value="paulSab">Université Paul Sabatier
-									<option value="facPharma">Faculté de Pharmacie
-								</select>
-							</div>
-							<br>
-							<div class="form-group">
-								<label class="sr-only" >Arrivée :</label>
-								<input type="text" class="form-control"
-									id="arriveeZone" placeholder="Donnez un destination">
-							</div>
-							<br>
-							<button type="submit" class="btn btn-default">Rechercher</button>
-						</form>
+						<div class="form-group">
+							<label class="sr-only">Départ :</label> <select
+								id="arretVelosBus" name="arret" size="1">
+								<option value="paulSab">Université Paul Sabatier
+								
+								<option value="facPharma">Faculté de Pharmacie
+							
+							</select>
+						</div>
+						<div class="form-group">
+							<label class="sr-only">Arrivée :</label> <input type="text"
+								class="form-control" id="arriveeZone"
+								placeholder="Donnez un destination"> <input type="text"
+								class="form-control" id="villeArriveeZone"
+								placeholder="Précisez la ville">
+						</div>
+						<button class="btn btn-default" onClick="getTrajet();">Rechercher</button>
+						<?php
+						
+						if (isset ( $_GET ['nullDest'] )) {
+							echo "<p style=\"color:#B1221C;\">Veuillez saisir une destination valable</p>";
+						}
+						?>
 					</div>
 					<hr>
-					<div id="tempsBus">
-						<span style="font-size: large; font-weight: bold;">Temps de trajet
-							en Bus : </span> <span class="heure">18 min</span>
+					<div id="infosTrajetBusVelo">
+		
 					</div>
-					<hr>
-					<div id="tempsVélo">
-						<span style="font-size: large; font-weight: bold;">Temps de trajet
-							en Vélô : </span> <span class="heure">25 min</span>
-					</div>
-					<hr>
+					<a href="nextBus.php"><h4>Voir les likes/unlikes des bus aux départs !</h4></a>
 				</div>
 			</div>
-			<div class="span3">Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar</div>
+			<div class="span3"><h2>Infos :</h2>
+				<hr class="monHR">
+				<?php
+				exec ( "java -jar jar/getInfos.jar", $html );
+				foreach ( $html as $value )
+					echo $value . "\n";
+				?></div>
 		</div>
 	</div>
 </body>

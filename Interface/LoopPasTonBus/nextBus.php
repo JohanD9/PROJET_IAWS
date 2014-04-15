@@ -43,20 +43,19 @@
 								<li><a href="/LoopPasTonBus/velos.php">Les vélos dispos/libres</a></li>
 								<li><a href="/LoopPasTonBus/veloBus.php">Bus/Métro ou Vélô?</a></li>
 							</ul></li>
-						<li><a href="/LoopPasTonBus/aPropos.php">A propos</a></li>
 					</ul>
 					<?php
-						session_start ();
-						if (isClientLog ()) {
-							echo "<span style=\"float:right;\"><a href=\"/LoopPasTonBus/php/logout.php\">Deconnexion (". $_SESSION['login'].")</a></span>";
-						} else {
-							echo header('Location: /LoopPasTonBus/index.php');
-						}
+					session_start ();
+					if (isClientLog ()) {
+						echo "<span style=\"float:right;\"><a href=\"/LoopPasTonBus/php/logout.php\">Deconnexion (" . $_SESSION ['login'] . ")</a></span>";
+					} else {
+						echo header ( 'Location: /LoopPasTonBus/index.php' );
+					}
 					?>
 				</div>
 			</div>
 		</div>
-		
+
 		<!-- PremiÃ¨re ligne de notre grille -->
 		<div class="row show-grid">
 			<div class="span9">
@@ -75,43 +74,21 @@
 					alt="Mettre à jour les prochains bus" height="25" width="25"
 					onclick="refreshBus();">
 				<div id="contenuBus">
-				<?php
-				exec ( "java -jar jar/gestionBus.jar", $html );
-				foreach ( $html as $value )
-					echo $value . "\n";
-				?>
+					<?php
+					exec ( "java -jar jar/gestionBus.jar", $html );
+					foreach ( $html as $value )
+						echo $value . "\n";
+					?>
 				</div>
 			</div>
 			<div class="span3">
 				<h2>Infos :</h2>
 				<hr class="monHR">
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
+				<?php
+				exec ( "java -jar jar/getInfos.jar", $html2 );
+				foreach ( $html2 as $value2 )
+					echo $value2 . "\n";
+				?>
 			</div>
 		</div>
 	</div>

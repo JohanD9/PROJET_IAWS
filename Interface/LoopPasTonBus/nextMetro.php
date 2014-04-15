@@ -42,15 +42,14 @@
 								<li><a href="/LoopPasTonBus/velos.php">Les vélos dispos/libres</a></li>
 								<li><a href="/LoopPasTonBus/veloBus.php">Bus/Métro ou Vélô?</a></li>
 							</ul></li>
-						<li><a href="/LoopPasTonBus/aPropos.php">A propos</a></li>
 					</ul>
 					<?php
-						session_start ();
-						if (isClientLog ()) {
-							echo "<span style=\"float:right;\"><a href=\"/LoopPasTonBus/php/logout.php\">Deconnexion (". $_SESSION['login'].")</a></span>";
-						} else {
-							echo header('Location: /LoopPasTonBus/index.php');
-						}
+					session_start ();
+					if (isClientLog ()) {
+						echo "<span style=\"float:right;\"><a href=\"/LoopPasTonBus/php/logout.php\">Deconnexion (" . $_SESSION ['login'] . ")</a></span>";
+					} else {
+						echo header ( 'Location: /LoopPasTonBus/index.php' );
+					}
 					?>
 				</div>
 			</div>
@@ -62,8 +61,8 @@
 				<h2>Les prochains métros :</h2>
 				<hr class="monHR">
 				<div id="tempsAttenteMetro">
-					<span style="font-size: large; font-weight:bold;">Votre prochain métro dans moins de : </span>
-					<span class="heure"><?php yourTime() ?></span>
+					<span style="font-size: large; font-weight: bold;">Votre prochain
+						métro dans moins de : </span> <span class="heure"><?php yourTime() ?></span>
 				</div>
 				<hr>
 				<div id="prochainDepartMetro">
@@ -75,10 +74,12 @@
 								class="heure"> 22 min 30</span>
 								<div class=icone style="float: right;">
 									<img id=likeA class="clic" src="pictures/like.png" alt="Like"
-										height="30" width="30" onclick="likeMetro('A');"> <span>1050</span>
+										height="30" width="30" onclick="likeMetro('A');"> <span
+										id="nbLikeA"><script type="text/javascript">nbLikeMetro('A');</script></span>
 									<img id=unlikeA class="clic" src="pictures/unlike.png"
 										alt="Unlike" height="30" width="30"
-										onclick="unlikeMetro('A');"> <span>103</span>
+										onclick="unlikeMetro('A');"> <span id="nbUnlikeA"><script
+											type="text/javascript">nbUnlikeMetro('A');</script></span>
 								</div>
 							</td>
 						</tr>
@@ -92,9 +93,11 @@
 									26 min 30</span>
 								<div class=icone style="float: right;">
 									<img id=likeB class="clic" src="pictures/like.png" alt="Like"
-										height="30" width="30" onclick="likeMetro('B');"> <span>1050</span><img
+										height="30" width="30" onclick="likeMetro('B');"> <span
+										id="nbLikeB"><script type="text/javascript">nbLikeMetro('B');</script></span><img
 										id=unlikeB class="clic" src="pictures/unlike.png" alt="Unlike"
-										height="30" width="30" onclick="unlikeMetro('B');"> <span>103</span>
+										height="30" width="30" onclick="unlikeMetro('B');"> <span
+										id="nbUnlikeB"><script type="text/javascript">nbUnlikeMetro('B');</script></span>
 								</div>
 							</td>
 						</tr>
@@ -136,34 +139,15 @@
 					<span style="font-size: small;">* Hors vacances scolaires</span>
 				</div>
 			</div>
-			<div class="span3">Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar
-				Sidebar Sidebar</div>
+			<div class="span3">
+				<h2>Infos :</h2>
+				<hr class="monHR">
+				<?php
+				exec ( "java -jar jar/getInfos.jar", $html );
+				foreach ( $html as $value )
+					echo $value . "\n";
+				?>
+			</div>
 		</div>
 	</div>
 </body>
