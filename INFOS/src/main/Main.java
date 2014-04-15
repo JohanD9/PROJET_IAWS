@@ -1,6 +1,7 @@
 package main;
 
 import java.io.IOException;
+import java.io.PrintStream;
 import java.util.ArrayList;
 
 import jsonObjects.Message;
@@ -26,5 +27,18 @@ public class Main
 			listeTitle.add(listeMessage.get(i).getTitle());
 			listeContent.add(listeMessage.get(i).getContent());
 		}
+		
+		String html = "";
+		for (int j = 0; j < listeTitle.size(); j++) {
+			html += "<div class=\"infos\" id=\"infos1\" onClick=\"pop(" + j + ");\">\n"
+					+ "<p>" + listeTitle.get(j) + "</p>\n"
+							+ "</div>\n"
+							+ "<div id=\"infosContent" + j + "\" style=\"display: none\">\n"
+									+ listeContent.get(j) + "</div>\n"
+											+ "<hr>\n";
+		}
+		
+		PrintStream pstream = new PrintStream(System.out, true, "UTF-8");
+		pstream.println(html);
 	}
 }

@@ -2,6 +2,10 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+<<<<<<< HEAD
 	<classpathentry exported="true" kind="lib" path="C:/Users/CLASTRIER/Documents/GitHub/PROJET_IAWS/JAR/org.json-20120521.jar"/>
+=======
+	<classpathentry kind="lib" path="/home/jdebat/DATA/M1_INFO/S8/IAWS/TP/PROJET_IAWS/JAR/org.json-20120521.jar"/>
+>>>>>>> 4ee8ede8941d0fcdb5722d658907dc0fc83ebdc6
 	<classpathentry kind="output" path="bin"/>
 </classpath>
